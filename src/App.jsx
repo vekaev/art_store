@@ -6,14 +6,15 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import MainPage from './pages/MainPage';
-import AboutPage from './pages/AboutPage';
-import EventPage from './pages/EventPage';
-import ShopPage from './pages/ShopPage';
-import CooperationPage from './pages/CooperationPage';
-import ContactPage from './pages/ContactPage';
+import Main from './containers/pages/Main';
+import About from './containers/pages/About';
+import Event from './containers/pages/Event';
+import Shop from './containers/pages/Shop';
+import Cooperation from './containers/pages/Cooperation';
+import Contact from './containers/pages/Contact';
 import Header from './containers/Header';
 import Footer from './containers/Footer';
+import Cart from './containers/pages/Cart';
 
 export default function App() {
   return (
@@ -21,12 +22,13 @@ export default function App() {
       <Header></Header>
       <main>
         <Switch>
-          <Route exact path='/' component={MainPage} />
-          <Route path='/about' component={AboutPage} />
-          <Route path='/events' component={EventPage} />
-          <Route path='/shop' component={ShopPage} />
-          <Route path='/cooperation' component={CooperationPage} />
-          <Route path='/contact' component={ContactPage} />
+          <Route exact path='/' component={Main} />
+          <Route path='/about' component={About} />
+          <Route path='/events' component={Event} />
+          <Route path='/shop' component={Shop} />
+          <Route path='/cooperation' component={Cooperation} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/cart' component={Cart} />
           <Redirect to='/' />
         </Switch>
       </main>
