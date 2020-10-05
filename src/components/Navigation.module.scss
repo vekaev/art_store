@@ -4,18 +4,41 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 30px;
   .link {
-    margin: 0 20px;
+    //margin: 0 20px;
     a {
+      padding: 23px;
       font-weight: normal;
       font-size: 30px;
       line-height: 41px;
       text-transform: uppercase;
       color: black;
       white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: $color-rose;
     }
     .activeLink {
-      color: $color-rose;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .activeLink.events {
+      background-image: url('/design/images/hoverBcg/events.svg');
+    }
+    .activeLink.about {
+      background-image: url('/design/images/hoverBcg/about.svg');
+    }
+    .activeLink.shop {
+      background-image: url('/design/images/hoverBcg/shop.svg');
+    }
+    .activeLink.cooperation {
+      background-image: url('/design/images/hoverBcg/cooperation.svg');
+    }
+    .activeLink.contact {
+      background-image: url('/design/images/hoverBcg/contact.svg');
     }
   }
 }

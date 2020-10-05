@@ -18,7 +18,9 @@
   font-weight: 700;
   font-style: normal;
 }
-
+body {
+  background-color: #f9f6f0;
+}
 * {
   font-family: 'Nunito', sans-serif;
   box-sizing: border-box;
@@ -27,6 +29,11 @@
   margin: 0;
   padding: 0;
   color: black;
+}
+.content {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h1 {

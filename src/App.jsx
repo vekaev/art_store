@@ -12,15 +12,15 @@ import Event from './containers/pages/Event';
 import Shop from './containers/pages/Shop';
 import Cooperation from './containers/pages/Cooperation';
 import Contact from './containers/pages/Contact';
-import Header from './containers/Header';
-import Footer from './containers/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Cart from './containers/pages/Cart';
 
 export default function App() {
   return (
     <Router>
       <Header></Header>
-      <main>
+      <main className='content'>
         <Switch>
           <Route exact path='/' component={Main} />
           <Route path='/about' component={About} />

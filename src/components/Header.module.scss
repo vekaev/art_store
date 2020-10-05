@@ -1,0 +1,60 @@
+@import '../variable';
+
+.header {
+  width: 100%;
+  position: relative;
+  background-color: $color-header-bcg;
+  padding: 0 150px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 360px;
+    background-image: url('/design/images/header_curtain.svg');
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    transform: scale(-1, 1);
+  }
+  .logo {
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    .logoImg {
+      display: inline-block;
+      min-width: 110px;
+      max-width: 110px;
+      width: 100%;
+      height: 30px;
+      background-color: black;
+      mask: url('/design/images/main_logo.svg') no-repeat center / contain;
+      -webkit-mask: url('/design/images/main_logo.svg') no-repeat center /
+        contain;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: $color-rose;
+      }
+    }
+  }
+
+  .divider {
+    width: 100%;
+    margin: 0 auto 30px;
+    height: 6px;
+    background-image: url('/design/images/divider-line.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
