@@ -5,7 +5,7 @@ import Cart from '../components/Cart';
 
 const Link = ({ name, link }) => {
   return (
-    <li class={styles.link}>
+    <li className={styles.link}>
       <NavLink
         activeClassName={`${styles.activeLink} ${styles[`${link}`]}`}
         to={`/${link}`}

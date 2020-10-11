@@ -1,0 +1,96 @@
+@import '../variable';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  background-image: url('/design/images/bcg_button.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.small {
+    height: 70px;
+    min-height: 70px;
+    min-width: 190px;
+  }
+
+  &.large {
+    height: 110px;
+    min-height: 110px;
+    min-width: 320px;
+  }
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    display: inline-block;
+    background-color: black;
+    transition: background-color 0.2s ease;
+  }
+
+  &:before {
+    left: 0;
+    bottom: 0;
+    height: 7px;
+    width: 100%;
+    mask: url('/design/images/select_underline.svg') no-repeat bottom / contain;
+    -webkit-mask: url('/design/images/select_underline.svg') no-repeat bottom /
+      contain;
+  }
+
+  &:after {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 28px;
+    min-width: 28px;
+    max-width: 28px;
+    mask: url('/design/images/select_arrow.svg') no-repeat center / contain;
+    -webkit-mask: url('/design/images/select_arrow.svg') no-repeat center /
+      contain;
+  }
+
+  select {
+    min-width: 254px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    font-family: Butler Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    color: $color-rose;
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    &:after {
+      background-color: $color-rose;
+    }
+  }
+}

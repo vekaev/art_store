@@ -19,8 +19,8 @@ import Cart from './containers/pages/Cart';
 export default function App() {
   return (
     <Router>
-      <Header></Header>
-      <main className='content'>
+      <Header />
+      <main style={{ minHeight: 'calc(100vh - 500px)' }} className='content'>
         <Switch>
           <Route exact path='/' component={Main} />
           <Route path='/about' component={About} />
@@ -29,7 +29,7 @@ export default function App() {
           <Route path='/cooperation' component={Cooperation} />
           <Route path='/contact' component={Contact} />
           <Route path='/cart' component={Cart} />
-          <Redirect to='/' />
+          {/*<Redirect to='/'/>*/}
         </Switch>
       </main>
       <Footer />
