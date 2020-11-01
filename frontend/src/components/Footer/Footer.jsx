@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import { NavLink } from 'react-router-dom';
-import { Select } from '../Components';
 
 const Link = ({ name, link }) => {
   return (

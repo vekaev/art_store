@@ -13,6 +13,7 @@
     width: 150px;
     height: 360px;
     background-image: url("/img/header_curtain.svg");
+    pointer-events: none;
   }
   &:before {
     left: 0;

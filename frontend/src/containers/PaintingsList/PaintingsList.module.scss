@@ -1,0 +1,61 @@
+@import "../../variable";
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  max-width: 380px;
+  min-height: 600px;
+  &-img {
+    background-color: $color-header-bcg;
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+  &:nth-child(1),
+  &:nth-child(6),
+  &:nth-child(8) {
+    background: rgba(196, 196, 196, 0.2);
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer-btn {
+      text-transform: uppercase;
+      height: 70px;
+      min-height: 70px;
+      min-width: 70px;
+      width: 145px;
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 15px;
+    }
+    .footer-price {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 27px;
+      min-width: 70px;
+      width: 135px;
+      text-align: right;
+    }
+  }
+}

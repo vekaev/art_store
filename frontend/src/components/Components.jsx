@@ -1,19 +1,32 @@
 import React from 'react';
 import styles from './Components.module.scss';
 
+
+export const Image = ({src, alt, className}) => {
+  const imageUrl =
+    process.env.NODE_ENV !== "development"
+      ? src
+      : process.env.REACT_APP_BACKEND_URL + src;
+
+  return <img className={className} src={imageUrl} alt={alt}/>;
+}
+
 export const Button = ({
   type = 'button',
   name = 'button',
   children,
-  handleButtonClick,
+  onClick,
   size = 'small',
+  className,
+  disabled
 }) => {
   return (
     <button
-      className={`${styles['button']} ${styles[`${size}`]}`}
+      className={`${styles['button']} ${styles[`${size}`]} ${className}`}
       type={type}
       name={name}
-      onClick={handleButtonClick}
+      onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
