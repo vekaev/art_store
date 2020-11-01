@@ -1,0 +1,76 @@
+@import "../../variable";
+.linkList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  .link {
+    //margin: 0 20px;
+    a {
+      padding: 23px;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 41px;
+      text-transform: uppercase;
+      color: black;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: $color-rose;
+    }
+    .activeLink {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .activeLink.events {
+      background-image: url("/img/hoverBcg/events.svg");
+    }
+    .activeLink.about {
+      background-image: url("/img/hoverBcg/about.svg");
+    }
+    .activeLink.shop {
+      background-image: url("/img/hoverBcg/shop.svg");
+    }
+    .activeLink.contact {
+      background-image: url("/img/hoverBcg/contact.svg");
+    }
+  }
+}
+
+.cart {
+  display: inline-flex;
+  min-width: 90px;
+  transition: 0.2s ease;
+  align-items: center;
+  .iconCart {
+    display: inline-block;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    background-color: $color-rose;
+    mask: url("/img/icon_cart.svg") no-repeat center / contain;
+    -webkit-mask: url("/img/icon_cart.svg") no-repeat center / contain;
+    transition: background-color 0.2s ease;
+    margin-right: 3px;
+  }
+  .counter {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    color: $color-rose;
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    .iconCart {
+      background-color: black;
+    }
+    .counter {
+      color: black;
+    }
+  }
+}
