@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styles from './Navigation.module.scss';
-import Cart from '../Cart';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./Navigation.module.scss";
+import Cart from "../Cart";
 
 const Link = ({ name, link }) => {
   return (
@@ -16,19 +16,21 @@ const Link = ({ name, link }) => {
   );
 };
 
-export default function Navigation({cart}) {
+export default function Navigation({ cart, includeCart = true }) {
   return (
     <nav>
       <ul className={styles.linkList}>
-      <Link link={'events'} name={'Wydarzenia'} />
-        <Link link={'shop'} name={'Sklep'} />
-        <Link link={'about'} name={'O Fundacji / Współpraca'} />
-        <Link link={'contact'} name={'Kontakt'} />
-        <li>
-          <NavLink to='/cart'>
-            <Cart cart={cart}/>
-          </NavLink>
-        </li>
+        <Link link={"events"} name={"Wydarzenia"} />
+        <Link link={"shop"} name={"Sklep"} />
+        <Link link={"about"} name={"O Fundacji / Współpraca"} />
+        <Link link={"contact"} name={"Kontakt"} />
+        {includeCart && (
+          <li>
+            <NavLink to="/cart">
+              <Cart cart={cart} />
+            </NavLink>
+          </li>
+        )}
       </ul>
     </nav>
   );

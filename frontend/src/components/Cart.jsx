@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Navigation/Navigation.module.scss';
+import React from "react";
+import styles from "./Navigation/Navigation.module.scss";
 
 export default function Cart({ cart }) {
   return (
