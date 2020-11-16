@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Main from "./containers/pages/Main";
-import About from "./containers/pages/About";
-import Event from "./containers/pages/Event";
-import Shop from "./containers/pages/Shop";
-import Contact from "./containers/pages/Contact";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Cart from "./containers/pages/Cart";
-import { useQuery } from "@apollo/client";
-import { paintingsQuery } from "./queries/queries";
+import React, { useEffect, useState } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Main from './containers/pages/Main';
+import About from './containers/pages/About';
+import Event from './containers/pages/Event';
+import Shop from './containers/pages/Shop';
+import Contact from './containers/pages/Contact';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Cart from './containers/pages/Cart';
+import { useQuery } from '@apollo/client';
+import { paintingsQuery } from './queries/queries';
 
 export default function App() {
   const { loading, error, data } = useQuery(paintingsQuery);
@@ -26,14 +26,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    if (localStorage.hasOwnProperty("cart")) {
-      const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
-      //TODO: Create checking for existing cart item in database list
-      setNewCart(cartFromLocalStorage);
-    }
-  }, []);
-
-  useEffect(() => {
     if (data && cart.length) {
       const newList = data.paintings.map((item) => {
         if (cart.find((cart) => cart.id === item.id)) {
@@ -47,6 +39,20 @@ export default function App() {
     }
   }, [data]);
 
+  useEffect(() => {
+    if (data?.paintings && localStorage.hasOwnProperty('cart')) {
+      const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+
+      const checkedForExistCart = cartFromLocalStorage.filter((cartItem) => {
+        if (data?.paintings.find((item) => item?.id === cartItem?.id)) {
+          return cartItem;
+        }
+      });
+
+      setNewCart(checkedForExistCart);
+    }
+  }, [data]);
+
   const removeFromCart = (card) => {
     if (
       paintingList.find((item) => item.id === card.id) &&
@@ -54,7 +60,7 @@ export default function App() {
     ) {
       const newCart = cart.filter((item) => item.id !== card.id);
       setNewCart(newCart);
-      localStorage.setItem("cart", JSON.stringify(newCart));
+      localStorage.setItem('cart', JSON.stringify(newCart));
 
       const newList = paintingList.map((item) => {
         if (cart.find((cart) => cart.id === item.id)) {
@@ -75,20 +81,20 @@ export default function App() {
         return item;
       });
       setPaintingList(newList);
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
   }, [cart]);
 
   return (
     <>
       <Header cart={cart} />
-      <main className="content">
+      <main className='content'>
         <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/about" component={About} />
-          <Route path="/events" component={Event} />
+          <Route exact path='/' component={Main} />
+          <Route path='/about' component={About} />
+          <Route path='/events' component={Event} />
           <Route
-            path="/shop"
+            path='/shop'
             component={() => (
               <Shop
                 AddToCart={AddToCart}
@@ -97,9 +103,9 @@ export default function App() {
               />
             )}
           />
-          <Route path="/contact" component={Contact} />
+          <Route path='/contact' component={Contact} />
           <Route
-            path="/cart"
+            path='/cart'
             component={() => (
               <Cart cart={cart} removeFromCart={removeFromCart} />
             )}

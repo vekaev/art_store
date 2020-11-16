@@ -1,15 +1,22 @@
 import React from 'react';
 import styles from './Components.module.scss';
 
+export const LinkWrapper = ({ href, className, children }) => {
+  return (
+    <a className={`${styles['LinkWrapper']} ${className}`} href={href}>
+      {children}
+    </a>
+  );
+};
 
-export const Image = ({src, alt, className}) => {
+export const Image = ({ src, alt, className }) => {
   const imageUrl =
-    process.env.NODE_ENV !== "development"
+    process.env.NODE_ENV !== 'development'
       ? src
       : process.env.REACT_APP_BACKEND_URL + src;
 
-  return <img className={className} src={imageUrl} alt={alt}/>;
-}
+  return <img className={className} src={imageUrl} alt={alt} />;
+};
 
 export const Button = ({
   type = 'button',
@@ -18,7 +25,7 @@ export const Button = ({
   onClick,
   size = 'small',
   className,
-  disabled
+  disabled,
 }) => {
   return (
     <button

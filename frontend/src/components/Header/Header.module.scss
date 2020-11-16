@@ -1,4 +1,4 @@
-@import "../../variable";
+@import '../../variable';
 
 .header {
   width: 100%;
@@ -17,12 +17,12 @@
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 150px;
     height: 360px;
-    background-image: url("/img/header_curtain.svg");
+    background-image: url('/img/header_curtain.svg');
     pointer-events: none;
     background-repeat: no-repeat;
     @media (max-width: 1300px) {
@@ -70,8 +70,8 @@
       width: 100%;
       height: 30px;
       background-color: black;
-      mask: url("/img/main_logo.svg") no-repeat center / contain;
-      -webkit-mask: url("/img/main_logo.svg") no-repeat center / contain;
+      mask: url('/img/main_logo.svg') no-repeat center / contain;
+      -webkit-mask: url('/img/main_logo.svg') no-repeat center / contain;
       transition: background-color 0.2s ease;
       &:hover {
         background-color: $color-rose;
@@ -92,14 +92,14 @@
       transition: all 1s ease;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
         display: block;
         width: 36px;
         height: 2px;
-        background-image: url("/img/hamburger/ham-first.svg");
+        background-image: url('/img/hamburger/ham-first.svg');
         background-repeat: no-repeat;
         background-size: cover;
         transition: all 0.3s ease;
@@ -112,21 +112,21 @@
         width: 36px;
         height: 2px;
         transition: all 0.5s ease;
-        background-image: url("/img/hamburger/ham-second.svg");
+        background-image: url('/img/hamburger/ham-second.svg');
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 1;
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 10px;
         right: 0;
         display: block;
         width: 36px;
         height: 2px;
-        background-image: url("/img/hamburger/ham-third.svg");
+        background-image: url('/img/hamburger/ham-third.svg');
         background-repeat: no-repeat;
         background-size: cover;
         transition: all 0.3s ease;
@@ -196,7 +196,7 @@
     width: 100%;
     margin: 0 auto 30px;
     height: 6px;
-    background-image: url("/img/divider-line.svg");
+    background-image: url('/img/divider-line.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -218,21 +218,40 @@
   top: 55px;
   flex-direction: column;
   align-items: flex-end;
-  right: -100vw;
+  pointer-events: none;
+  opacity: 0;
   z-index: 100;
   transition: 1s ease;
   width: 100vw;
   height: 100vh;
-  &.active {
-    right: 0;
-    background: rgba(0, 0, 0, 0.16);
-    backdrop-filter: blur(4px);
-  }
+
   .asideContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
     width: 80vw;
-    background-image: url("/img/bcg.jpg");
+    right: -100vw;
+    background-image: url('/img/bcg.jpg');
     background-size: cover;
     height: calc(100vh - 20vh);
+    transition: 1s ease;
+    padding-bottom: 50px;
+    .AsidePhoneNumber {
+      margin-top: 100px;
+    }
+  }
+  &.active {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(4px);
+    pointer-events: unset;
+    .asideContent {
+      right: 0;
+      opacity: 1;
+    }
   }
   ul {
     flex-direction: column;
