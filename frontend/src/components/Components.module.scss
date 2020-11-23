@@ -127,3 +127,24 @@
     min-width: 190px;
   }
 }
+
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  font-family: Butler Stencil;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: $color-rose;
+  &::before {
+    display: inline-block;
+    width: 32px;
+    height: 17px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    content: '';
+    mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
+    -webkit-mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
+    background-color: $color-rose;
+  }
+}

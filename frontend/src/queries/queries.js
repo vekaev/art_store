@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const paintingsQuery = gql`
-  query paintingsQuery {
+export const allPaintingsQuery = gql`
+  query allPaintingsQuery {
     paintings {
       id
       Name
@@ -15,3 +15,21 @@ export const paintingsQuery = gql`
     }
   }
 `;
+
+export const onePaintingQuery = gql`
+  query onePaintingQuery($id: ID!) {
+    painting(id: $id) {
+      id
+      Name
+      price
+      Depiction
+      author {
+        Name
+      }
+      img {
+        url
+      }
+    }
+  }
+`;
+

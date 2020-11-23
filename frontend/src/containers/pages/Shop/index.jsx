@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { PaintingsList } from "../../PaintingsList/PaintingsList";
+import React from 'react';
+import { PaintingsList } from '../../PaintingsList/PaintingsList';
 
 export default function Shop({ paintings, paintingsError, AddToCart }) {
   return (

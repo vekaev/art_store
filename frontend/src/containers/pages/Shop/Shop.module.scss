@@ -1,0 +1,58 @@
+@import '../../../variable';
+
+.titlePart {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  .goBack {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    margin-bottom: 60px;
+    &:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 767px) {
+    }
+  }
+
+  .title {
+    display: inline-block;
+    font-family: Butler Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 34px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+}
+
+section.intro {
+  display: flex;
+  .slider {
+    max-width: 60%;
+    width: 100%;
+    margin-right: 20px;
+    img {
+      object-fit: cover !important;
+    }
+  }
+  .info {
+    max-width: 35%;
+    .pricePart {
+      .price {
+      }
+
+      .arrow {
+      }
+    }
+    .description {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      white-space: pre-line;
+    }
+  }
+}

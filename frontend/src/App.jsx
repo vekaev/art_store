@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import Main from './containers/pages/Main';
 import About from './containers/pages/About';
 import Event from './containers/pages/Event';
@@ -9,81 +9,101 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cart from './containers/pages/Cart';
 import { useQuery } from '@apollo/client';
-import { paintingsQuery } from './queries/queries';
+import { allPaintingsQuery } from './queries/queries';
+import PicturePage from './containers/pages/Shop/picturePage';
 
 export default function App() {
-  const { loading, error, data } = useQuery(paintingsQuery);
+  const [store, setStore] = useState({
+    cart: [],
+    paintingList: [],
+  });
 
-  const [cart, setNewCart] = useState([]);
-  const [paintingList, setPaintingList] = useState([]);
+  const { cart, paintingList } = store;
 
-  const AddToCart = (value) => {
-    if (!cart.find((item) => item.id === value.id)) {
-      setNewCart([...cart, value]);
-    } else {
-      removeFromCart(value);
-    }
-  };
+  const { error, data } = useQuery(allPaintingsQuery);
+  const { pathname } = useLocation();
 
+  //SCROLL ON TOP OF THE PAGE AFTER ROUTING
   useEffect(() => {
-    if (data && cart.length) {
-      const newList = data.paintings.map((item) => {
-        if (cart.find((cart) => cart.id === item.id)) {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  const AddToCart = (id) => {
+    const painting = paintingList.find((item) => item.id === id);
+    const checkForExistinCart = cart.find((item) => item.id === id);
+
+    if (!checkForExistinCart) {
+      const newPaintingList = paintingList.map((item) => {
+        if (item.id === id || checkForExistinCart) {
           return { ...item, choosen: true };
         }
         return item;
       });
-      setPaintingList(newList);
-    } else if (data && data.paintings) {
-      setPaintingList(data.paintings);
-    }
-  }, [data]);
 
-  useEffect(() => {
-    if (data?.paintings && localStorage.hasOwnProperty('cart')) {
-      const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
-
-      const checkedForExistCart = cartFromLocalStorage.filter((cartItem) => {
-        if (data?.paintings.find((item) => item?.id === cartItem?.id)) {
-          return cartItem;
-        }
+      setStore({
+        cart: [...cart, painting],
+        paintingList: newPaintingList,
       });
-
-      setNewCart(checkedForExistCart);
+      localStorage.setItem('cart', JSON.stringify([...cart, painting]));
+    } else {
+      removeFromCart(id);
     }
-  }, [data]);
+  };
 
-  const removeFromCart = (card) => {
-    if (
-      paintingList.find((item) => item.id === card.id) &&
-      cart.find((item) => item.id === card.id)
-    ) {
-      const newCart = cart.filter((item) => item.id !== card.id);
-      setNewCart(newCart);
-      localStorage.setItem('cart', JSON.stringify(newCart));
+  const removeFromCart = (id) => {
+    const painting = paintingList.find((item) => item.id === id);
+    const checkForExistinCart = cart.find((item) => item.id === id);
+
+    if (painting && checkForExistinCart) {
+      const newCart = cart.filter((item) => item.id !== id);
 
       const newList = paintingList.map((item) => {
-        if (cart.find((cart) => cart.id === item.id)) {
+        if (item.id === id) {
           return { ...item, choosen: false };
         }
         return item;
       });
-      setPaintingList(newList);
+
+      setStore({
+        cart: newCart,
+        paintingList: newList,
+      });
+
+      localStorage.setItem('cart', JSON.stringify(newCart));
     }
   };
 
   useEffect(() => {
-    if (paintingList && cart.length) {
-      const newList = paintingList.map((item) => {
-        if (cart.find((cart) => cart.id === item.id)) {
-          return { ...item, choosen: true };
-        }
-        return item;
+    let newPaintingList = [];
+    let newPaintingCart = [];
+
+    if (data && data.paintings) {
+      newPaintingList = data?.paintings;
+      if (localStorage.hasOwnProperty('cart')) {
+        const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+
+        newPaintingCart = cartFromLocalStorage.map((cartItem) => {
+          const idx = newPaintingList.findIndex(
+            (item) => item?.id === cartItem?.id
+          );
+          if (idx !== -1) return cartItem;
+        });
+
+        newPaintingList = newPaintingList.map((item) => {
+          if (newPaintingCart.find((cartItem) => item?.id === cartItem?.id)) {
+            return { ...item, choosen: true };
+          } else {
+            return { ...item, choosen: false };
+          }
+        });
+      }
+
+      setStore({
+        cart: newPaintingCart,
+        paintingList: newPaintingList,
       });
-      setPaintingList(newList);
-      localStorage.setItem('cart', JSON.stringify(cart));
     }
-  }, [cart]);
+  }, [data]);
 
   return (
     <>
@@ -93,6 +113,10 @@ export default function App() {
           <Route exact path='/' component={Main} />
           <Route path='/about' component={About} />
           <Route path='/events' component={Event} />
+          <Route
+            path='/shop/:picureId'
+            component={() => <PicturePage AddToCart={AddToCart} />}
+          />
           <Route
             path='/shop'
             component={() => (
@@ -110,7 +134,7 @@ export default function App() {
               <Cart cart={cart} removeFromCart={removeFromCart} />
             )}
           />
-          {/*<Redirect to='/'/>*/}
+          <Redirect to='/' />
         </Switch>
       </main>
       <Footer />

@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 import styles from './Cart.module.scss';
 import { Button, Image } from '../../../components/Components';
-import { PaintingsList } from '../../PaintingsList/PaintingsList';
 
 const CartRouteLinks = () => {
   return (
@@ -48,7 +47,7 @@ const CartItem = ({ card, removeFromCart }) => {
         <p className={styles.price}>{card?.price} zł</p>
       </div>
       <span
-        onClick={() => removeFromCart(card)}
+        onClick={() => removeFromCart(card.id)}
         className={styles.crossBtn}
       ></span>
     </li>
@@ -71,7 +70,7 @@ export default function Cart({ cart, removeFromCart }) {
   let match = useRouteMatch();
   let history = useHistory();
   // console.log(match);
-  if (!cart.length) {
+  if (cart.length === 0) {
     return (
       <>
         <h2 className={styles.NothingTitle}>Twój koszyk jest pusty</h2>

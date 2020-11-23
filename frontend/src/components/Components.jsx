@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Components.module.scss';
+import ImageGallery from 'react-image-gallery';
+import { Link } from 'react-router-dom';
 
 export const LinkWrapper = ({ href, className, children }) => {
   return (
@@ -55,6 +57,41 @@ export const Select = ({ name = 'select', optionArray = [], handleSelect }) => {
     </div>
   );
 };
+
+export const GoBackBtn = ({ href, className, children }) => {
+  return (
+    <Link to={href} className={`${styles.goBackBtn} ${className}`}>
+      {children}
+    </Link>
+  );
+};
+
+export const Slider = ({ imgArray }) => {
+  const imgSet = imgArray.map(({ url }) => {
+    const imageUrl =
+      process.env.NODE_ENV !== 'development'
+        ? url
+        : process.env.REACT_APP_BACKEND_URL + url;
+
+    return {
+      original: imageUrl,
+      thumbnail: imageUrl,
+    };
+  });
+  return (
+    <ImageGallery
+      additionalClass={styles['slider']}
+      useBrowserFullscreen={false}
+      showPlayButton={false}
+      // showNav={false}
+      showFullscreenButton={false}
+      showThumbnails={imgArray?.length > 1}
+      items={imgSet}
+    />
+  );
+};
+
+export const addToCartBtn = () => {};
 
 // const SelectMe = (event) => {
 //   let { name, value } = event.target;

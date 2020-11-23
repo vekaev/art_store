@@ -1,4 +1,4 @@
-@import "../../variable";
+@import '../../variable';
 
 .linkList {
   display: flex;
@@ -39,16 +39,16 @@
       background-repeat: no-repeat;
     }
     .activeLink.events {
-      background-image: url("/img/hoverBcg/events.svg");
+      background-image: url('/img/hoverBcg/events.svg');
     }
     .activeLink.about {
-      background-image: url("/img/hoverBcg/about.svg");
+      background-image: url('/img/hoverBcg/about.svg');
     }
     .activeLink.shop {
-      background-image: url("/img/hoverBcg/shop.svg");
+      background-image: url('/img/hoverBcg/shop.svg');
     }
     .activeLink.contact {
-      background-image: url("/img/hoverBcg/contact.svg");
+      background-image: url('/img/hoverBcg/contact.svg');
     }
     &:first-child {
       @media (max-width: 1300px) {
@@ -72,11 +72,11 @@
     max-width: 50px;
     height: 50px;
     background-color: $color-rose;
-    mask: url("/img/icon_cart.svg") no-repeat center / contain;
-    -webkit-mask: url("/img/icon_cart.svg") no-repeat center / contain;
+    mask: url('/img/icon_cart.svg') no-repeat center / contain;
+    -webkit-mask: url('/img/icon_cart.svg') no-repeat center / contain;
     transition: background-color 0.2s ease;
     margin-right: 3px;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       width: 35px;
       min-width: 35px;
       max-width: 35px;
@@ -89,7 +89,7 @@
     line-height: 41px;
     color: $color-rose;
     transition: color 0.2s ease;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-size: 14px;
       line-height: 19px;
     }

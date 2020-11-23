@@ -8,7 +8,7 @@
   @media (max-width: 1300px) {
     padding: 0 80px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     position: fixed;
     top: 0;
     padding: 0 20px;
@@ -30,7 +30,7 @@
       height: 190px;
       background-size: contain;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }
@@ -49,7 +49,7 @@
     @media (max-width: 1024px) {
       padding-bottom: 10px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       padding: 10px 0;
       justify-content: space-between;
     }
@@ -59,7 +59,7 @@
     }
     .cartLogo {
       display: none;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         display: unset;
       }
     }
@@ -81,7 +81,7 @@
     .hamburger {
       display: none;
 
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         display: block;
       }
       cursor: pointer;
@@ -206,7 +206,7 @@
   }
 
   .navPart {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }
