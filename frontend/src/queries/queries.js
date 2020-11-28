@@ -1,5 +1,16 @@
 import { gql } from '@apollo/client';
 
+
+export const allEventsQuery = gql`
+  query allEventsQuery {
+    events {
+      id
+      title 
+    }
+  }
+`;
+
+
 export const allPaintingsQuery = gql`
   query allPaintingsQuery {
     paintings {

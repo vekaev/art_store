@@ -2,17 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import Main from './containers/pages/Main';
 import About from './containers/pages/About';
-import Event from './containers/pages/Event';
+import EventsPage from './containers/pages/Event';
 import Shop from './containers/pages/Shop';
 import Contact from './containers/pages/Contact';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cart from './containers/pages/Cart';
 import { useQuery } from '@apollo/client';
-import { allPaintingsQuery } from './queries/queries';
+import { allPaintingsQuery, allEventsQuery } from './queries/queries';
 import PicturePage from './containers/pages/Shop/picturePage';
 
 export default function App() {
+  const fetchedPaintings = useQuery(allPaintingsQuery);
+  const fetchedEvents = useQuery(allEventsQuery);
+
   const [store, setStore] = useState({
     cart: [],
     paintingList: [],
@@ -20,7 +23,6 @@ export default function App() {
 
   const { cart, paintingList } = store;
 
-  const { error, data } = useQuery(allPaintingsQuery);
   const { pathname } = useLocation();
 
   //SCROLL ON TOP OF THE PAGE AFTER ROUTING
@@ -32,10 +34,10 @@ export default function App() {
     const painting = paintingList.find((item) => item.id === id);
     const checkForExistinCart = cart.find((item) => item.id === id);
 
-    if (!checkForExistinCart) {
+    if (!checkForExistinCart && painting) {
       const newPaintingList = paintingList.map((item) => {
         if (item.id === id || checkForExistinCart) {
-          return { ...item, choosen: true };
+          return { ...item, chosen: true };
         }
         return item;
       });
@@ -59,7 +61,7 @@ export default function App() {
 
       const newList = paintingList.map((item) => {
         if (item.id === id) {
-          return { ...item, choosen: false };
+          return { ...item, chosen: false };
         }
         return item;
       });
@@ -77,8 +79,8 @@ export default function App() {
     let newPaintingList = [];
     let newPaintingCart = [];
 
-    if (data && data.paintings) {
-      newPaintingList = data?.paintings;
+    if (fetchedPaintings?.data && fetchedPaintings?.data.paintings) {
+      newPaintingList = fetchedPaintings.data?.paintings;
       if (localStorage.hasOwnProperty('cart')) {
         const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
 
@@ -91,9 +93,9 @@ export default function App() {
 
         newPaintingList = newPaintingList.map((item) => {
           if (newPaintingCart.find((cartItem) => item?.id === cartItem?.id)) {
-            return { ...item, choosen: true };
+            return { ...item, chosen: true };
           } else {
-            return { ...item, choosen: false };
+            return { ...item, chosen: false };
           }
         });
       }
@@ -103,7 +105,7 @@ export default function App() {
         paintingList: newPaintingList,
       });
     }
-  }, [data]);
+  }, [fetchedPaintings.data]);
 
   return (
     <>
@@ -112,10 +114,18 @@ export default function App() {
         <Switch>
           <Route exact path='/' component={Main} />
           <Route path='/about' component={About} />
-          <Route path='/events' component={Event} />
           <Route
-            path='/shop/:picureId'
-            component={() => <PicturePage AddToCart={AddToCart} />}
+            path='/events'
+            component={() => (
+              <EventsPage
+                events={fetchedEvents?.data?.events}
+                error={fetchedEvents?.error}
+              />
+            )}
+          />
+          <Route
+            path='/shop/:pictureId'
+            component={() => <PicturePage cart={cart} AddToCart={AddToCart} />}
           />
           <Route
             path='/shop'
@@ -123,7 +133,7 @@ export default function App() {
               <Shop
                 AddToCart={AddToCart}
                 paintings={paintingList}
-                paintingsError={error}
+                paintingsError={fetchedEvents.error}
               />
             )}
           />

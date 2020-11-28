@@ -4,20 +4,24 @@ import { useParams } from 'react-router-dom';
 import { onePaintingQuery } from '../../../queries/queries';
 
 import styles from './Shop.module.scss';
-import { Slider, GoBackBtn } from '../../../components/Components';
+import {
+  Slider,
+  GoBackBtn,
+  AddToCartBtn,
+} from '../../../components/Components';
 import { LINKS } from '../../../utils/constants';
 
-export default function PicturePage({ AddToCart }) {
-  const { picureId } = useParams();
+export default function PicturePage({ AddToCart, cart }) {
+  const { pictureId } = useParams();
   const { loading, error, data } = useQuery(onePaintingQuery, {
-    variables: { id: picureId },
+    variables: { id: pictureId },
   });
 
   if (loading) return 'Loading';
   if (!data?.painting || error) return 'Error';
 
   const { painting } = data;
-  console.log(painting);
+
   return (
     <>
       <div className={styles.titlePart}>
@@ -31,7 +35,15 @@ export default function PicturePage({ AddToCart }) {
           <Slider imgArray={painting?.img} />
         </div>
         <div className={styles.info}>
-          <div className={styles.pricePart}></div>
+          <div className={styles.pricePart}>
+            <p className={styles.price}>{painting?.price} zł</p>
+            <AddToCartBtn
+              inCart={cart?.find((item) => item?.id === pictureId)}
+              onClick={() => AddToCart(pictureId)}
+            >
+              do koszyka
+            </AddToCartBtn>
+          </div>
           <p className={styles.description}>{painting?.Depiction}</p>
         </div>
       </section>

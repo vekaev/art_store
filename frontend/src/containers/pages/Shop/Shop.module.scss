@@ -41,12 +41,21 @@ section.intro {
   }
   .info {
     max-width: 35%;
+    width: 100%;
     .pricePart {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
       .price {
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 30px;
+        margin-right: 20px;
       }
 
-      .arrow {
-      }
+      // .arrow {
+      // }
     }
     .description {
       font-weight: normal;

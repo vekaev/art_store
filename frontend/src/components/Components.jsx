@@ -91,7 +91,27 @@ export const Slider = ({ imgArray }) => {
   );
 };
 
-export const addToCartBtn = () => {};
+export const AddToCartBtn = ({ onClick, className, inCart, children }) => {
+  if (inCart) {
+    return (
+      <p
+        className={`${styles.AddToCartBtn} ${styles.inCart} ${className}`}
+        onClick={onClick}
+      >
+        dodane
+      </p>
+    );
+  } else {
+    return (
+      <Button
+        className={`${styles.AddToCartBtn} ${className}`}
+        onClick={onClick}
+      >
+        {children || 'kupuję'}
+      </Button>
+    );
+  }
+};
 
 // const SelectMe = (event) => {
 //   let { name, value } = event.target;

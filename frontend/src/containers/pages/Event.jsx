@@ -1,5 +1,16 @@
 import React from 'react';
 
-export default function Event() {
-  return <h1>EventPage</h1>;
+const EventCard = ({ info }) => {
+  return <h2>{info?.title}</h2>;
+};
+
+export default function EventsPage({ events = [] }) {
+  console.log(events);
+  return (
+    <>
+      {events.map((item, idx) => (
+        <EventCard key={idx} info={item} />
+      ))}
+    </>
+  );
 }
