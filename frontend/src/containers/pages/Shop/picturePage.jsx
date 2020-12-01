@@ -36,7 +36,9 @@ export default function PicturePage({ AddToCart, cart }) {
         </div>
         <div className={styles.info}>
           <div className={styles.pricePart}>
-            <p className={styles.price}>{painting?.price} zł</p>
+            {painting?.price && (
+              <p className={styles.price}>{painting?.price} zł</p>
+            )}
             <AddToCartBtn
               inCart={cart?.find((item) => item?.id === pictureId)}
               onClick={() => AddToCart(pictureId)}

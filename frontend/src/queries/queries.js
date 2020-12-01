@@ -6,9 +6,23 @@ export const allEventsQuery = gql`
     events {
       id
       title 
+      description
+      place
+      img {
+        url
+      }
+      date
+      canceled
+      event_type {
+        title
+      }
     }
   }
 `;
+ 
+ 
+ 
+      
 
 
 export const allPaintingsQuery = gql`

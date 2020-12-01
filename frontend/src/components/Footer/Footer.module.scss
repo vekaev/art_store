@@ -1,4 +1,4 @@
-@import "../../variable";
+@import '../../variable';
 
 footer {
   .info-list {
@@ -11,7 +11,7 @@ footer {
     flex-wrap: wrap;
     padding: 40px 20px;
     background: rgba(255, 255, 255, 0.4);
-
+    margin-top: 120px;
     &__item {
       display: flex;
       align-items: center;
@@ -34,8 +34,8 @@ footer {
 
       &:nth-child(1) {
         .imp-part {
-          mask: url("/img/icon_info.svg") no-repeat center / contain;
-          -webkit-mask: url("/img/icon_info.svg") no-repeat center / contain;
+          mask: url('/img/icon_info.svg') no-repeat center / contain;
+          -webkit-mask: url('/img/icon_info.svg') no-repeat center / contain;
         }
       }
 
@@ -44,16 +44,16 @@ footer {
           min-width: 150px;
           max-width: 150px;
           height: 150px;
-          mask: url("/img/icon_michelangelo.svg") no-repeat center / contain;
-          -webkit-mask: url("/img/icon_michelangelo.svg") no-repeat center /
+          mask: url('/img/icon_michelangelo.svg') no-repeat center / contain;
+          -webkit-mask: url('/img/icon_michelangelo.svg') no-repeat center /
             contain;
         }
       }
 
       &:nth-child(3) {
         .imp-part {
-          mask: url("/img/icon_phone.svg") no-repeat center / contain;
-          -webkit-mask: url("/img/icon_phone.svg") no-repeat center / contain;
+          mask: url('/img/icon_phone.svg') no-repeat center / contain;
+          -webkit-mask: url('/img/icon_phone.svg') no-repeat center / contain;
         }
       }
 
@@ -106,7 +106,7 @@ footer {
       min-width: 58px;
       max-width: 58px;
       height: 39px;
-      background-image: url("/img/logo.svg");
+      background-image: url('/img/logo.svg');
       background-repeat: no-repeat;
       background-size: contain;
       margin-right: 30px;

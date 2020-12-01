@@ -4,5 +4,8 @@ export const COMPANY_INFO = {
 
 
 export const LINKS = {
-  shop: '/shop'
+  shop: '/shop',
+  events: '/events',
+  about: '/about',
+  contact: '/contact'
 }

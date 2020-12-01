@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Components.module.scss';
 import ImageGallery from 'react-image-gallery';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const LinkWrapper = ({ href, className, children }) => {
   return (
@@ -28,7 +28,18 @@ export const Button = ({
   size = 'small',
   className,
   disabled,
+  href,
 }) => {
+  if (href) {
+    return (
+      <NavLink
+        to={href}
+        className={`${styles['button']} ${styles[`${size}`]}  ${className}`}
+      >
+        {children}
+      </NavLink>
+    );
+  }
   return (
     <button
       className={`${styles['button']} ${styles[`${size}`]} ${className}`}
@@ -42,13 +53,79 @@ export const Button = ({
   );
 };
 
-export const Select = ({ name = 'select', optionArray = [], handleSelect }) => {
+export const Input = ({
+  required = false,
+  className,
+  value,
+  onChange,
+  placeholder,
+  name,
+  type = 'text',
+  textarea = false,
+}) => {
+  if (textarea) {
+    return (
+      <div className={`${styles.input} ${className}`}>
+        <textarea
+          placeholder={placeholder}
+          name={name}
+          value={value}
+          onChange={onChange}
+          required={required}
+          type={type}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className={styles['select']}>
-      <select name={name} onChange={handleSelect}>
-        {optionArray.map((item, key) => {
+    <div className={`${styles.input} ${className}`}>
+      <input
+        placeholder={placeholder}
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        type={type}
+      />
+    </div>
+  );
+};
+
+export const Select = ({
+  name = 'select',
+  optionArray = [],
+  handleSelect,
+  placeholder = '',
+  className,
+  required = false,
+  defaultValue = false,
+}) => {
+  return (
+    <div className={`${className} ${styles['select']}`}>
+      <select
+        value={defaultValue}
+        required={required}
+        placeholder={defaultValue && placeholder}
+        name={name}
+        onChange={handleSelect}
+      >
+        {!defaultValue && (
+          <option
+            defaultValue={defaultValue ? false : true}
+            disabled
+            value={''}
+          >
+            {placeholder}
+          </option>
+        )}
+        {optionArray.map((item, idx) => {
           return (
-            <option key={key} value={item.value}>
+            <option
+              defaultValue={defaultValue === item.value}
+              key={idx}
+              value={item.value}
+            >
               {item.name}
             </option>
           );

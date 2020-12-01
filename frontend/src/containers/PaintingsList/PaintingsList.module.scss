@@ -14,7 +14,7 @@
   max-width: 380px;
   min-height: 600px;
   &-img {
-    background-color: $color-header-bcg;
+    background-color: $body-bcg;
     display: inline-block;
     width: 350px;
     height: 350px;
@@ -23,10 +23,20 @@
 
   .title {
     font-weight: 900;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 41px;
   }
-
+  .info {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .type {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+  }
   &:nth-child(1),
   &:nth-child(6),
   &:nth-child(8) {
