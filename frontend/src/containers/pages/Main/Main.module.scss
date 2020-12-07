@@ -1,7 +1,7 @@
 @import '../../../variable';
 
 section.introDesktop {
-  margin: 100px 0;
+  margin: 100px 0 150px;
   display: flex;
   .imgPart {
     width: 560px;
@@ -195,36 +195,6 @@ section.contact {
       margin-top: 20px;
       font-size: 22px;
       line-height: 27px;
-    }
-  }
-}
-
-.MainPageLinks {
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: Butler Stencil;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-  padding: 12px;
-  transition: color 0.3s ease;
-  &::after {
-    content: '';
-    transform: scaleX(-1);
-    display: inline-block;
-    width: 54px;
-    height: 28px;
-    margin-left: 10px;
-    mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
-    -webkit-mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
-    background-color: black;
-    transition: background-color 0.3s ease;
-  }
-  &:hover {
-    color: $color-rose;
-    &::after {
-      background-color: $color-rose;
     }
   }
 }

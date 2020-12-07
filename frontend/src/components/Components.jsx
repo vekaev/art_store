@@ -3,6 +3,14 @@ import styles from './Components.module.scss';
 import ImageGallery from 'react-image-gallery';
 import { Link, NavLink } from 'react-router-dom';
 
+export const UnderImgLinks = ({ className, children, to }) => {
+  return (
+    <Link className={`${styles.UnderImgLinks} ${className}`} to={to}>
+      {children}
+    </Link>
+  );
+};
+
 export const LinkWrapper = ({ href, className, children }) => {
   return (
     <a className={`${styles['LinkWrapper']} ${className}`} href={href}>

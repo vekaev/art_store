@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import Main from './containers/pages/Main/Main';
-import About from './containers/pages/About';
+import About from './containers/pages/About/About';
 import EventsPage from './containers/pages/Event/Event';
 import Shop from './containers/pages/Shop';
 import Contact from './containers/pages/Contact';
@@ -129,8 +129,10 @@ export default function App() {
   return (
     <>
       <Header cart={cart} />
-      <main className='content'>
-        <Switch>
+      <Switch>
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <main className='content'>
           <Route
             exact
             path='/'
@@ -138,7 +140,7 @@ export default function App() {
               <Main events={sortedEvents} paintings={paintingList} />
             )}
           />
-          <Route path='/about' component={About} />
+
           <Route
             path='/events'
             component={() => (
@@ -159,7 +161,7 @@ export default function App() {
               />
             )}
           />
-          <Route path='/contact' component={Contact} />
+
           <Route
             path='/cart'
             component={() => (
@@ -167,8 +169,9 @@ export default function App() {
             )}
           />
           <Redirect to='/' />
-        </Switch>
-      </main>
+        </main>
+      </Switch>
+
       <Footer />
     </>
   );

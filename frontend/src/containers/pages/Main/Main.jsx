@@ -1,5 +1,10 @@
 import React from 'react';
-import { Image, Button, Input } from '../../../components/Components';
+import {
+  Image,
+  Button,
+  Input,
+  UnderImgLinks,
+} from '../../../components/Components';
 import styles from './Main.module.scss';
 import moment from 'moment';
 import { Link, NavLink } from 'react-router-dom';
@@ -22,9 +27,9 @@ const Intro = React.memo(({ events = [] }) => {
   return (
     <section className={styles.introDesktop}>
       <span className={styles.imgPart}>
-        <MainPageLinks className={styles.imgPart_link} to={LINKS.events}>
+        <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
           Wydarzenia
-        </MainPageLinks>
+        </UnderImgLinks>
         <div className={styles.imgPart_wrapper}>
           <Image src={lastEvent?.img.url} />
         </div>
@@ -96,9 +101,9 @@ const About = React.memo(() => {
         </p>
       </div>
       <div className={styles.imgPart}>
-        <MainPageLinks className={styles.about_link} to={LINKS.about}>
+        <UnderImgLinks className={styles.about_link} to={LINKS.about}>
           czym siĘ zajmujemy?
-        </MainPageLinks>
+        </UnderImgLinks>
         <img src={'/img/img_lobster.jpg'} />
       </div>
     </section>
@@ -122,9 +127,9 @@ const Contact = React.memo(() => {
         <img src={'/img/img_coop.jpg'} />
       </div>
       <form className={styles.formPart}>
-        <MainPageLinks className={styles.formPart_title} to={LINKS.contact}>
+        <UnderImgLinks className={styles.formPart_title} to={LINKS.contact}>
           współpraca
-        </MainPageLinks>
+        </UnderImgLinks>
         <Input
           className={styles.formPart_input}
           placeholder='Imę i Nazwisko'
@@ -157,11 +162,3 @@ const Contact = React.memo(() => {
     </section>
   );
 });
-
-const MainPageLinks = ({ className, children, to }) => {
-  return (
-    <Link className={`${styles.MainPageLinks} ${className}`} to={to}>
-      {children}
-    </Link>
-  );
-};

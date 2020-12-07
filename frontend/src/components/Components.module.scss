@@ -16,6 +16,8 @@
   background-color: transparent;
   transition: 0.2s ease;
   cursor: pointer;
+  font-size: 22px;
+  line-height: 27px;
 
   &:active {
     transform: scale(0.95);
@@ -27,6 +29,11 @@
     min-width: 190px;
   }
 
+  &.medium {
+    height: 80px;
+    min-height: 80px;
+    min-width: 280px;
+  }
   &.large {
     height: 110px;
     min-height: 110px;
@@ -239,6 +246,36 @@
       align-items: center;
       justify-content: center;
       background-image: none;
+    }
+  }
+}
+
+.UnderImgLinks {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Butler Stencil;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  padding: 12px;
+  transition: color 0.3s ease;
+  &::after {
+    content: '';
+    transform: scaleX(-1);
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+    margin-left: 10px;
+    mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
+    -webkit-mask: url('/img/icon_arrowLeft.svg') repeat-x left / contain;
+    background-color: black;
+    transition: background-color 0.3s ease;
+  }
+  &:hover {
+    color: $color-rose;
+    &::after {
+      background-color: $color-rose;
     }
   }
 }
