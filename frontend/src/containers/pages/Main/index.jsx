@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Image,
   Button,
@@ -7,11 +7,13 @@ import {
 } from '../../../components/Components';
 import styles from './Main.module.scss';
 import moment from 'moment';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LINKS } from '../../../utils/constants';
-import { useState } from 'react';
+import { useStore } from '../../../providers/StoreProvider';
 
-export default function Main({ events = [], paintings = [] }) {
+export default function Main() {
+  const { events, paintings } = useStore();
+
   return (
     <>
       <Intro events={events} />
@@ -104,7 +106,7 @@ const About = React.memo(() => {
         <UnderImgLinks className={styles.about_link} to={LINKS.about}>
           czym siĘ zajmujemy?
         </UnderImgLinks>
-        <img src={'/img/img_lobster.jpg'} />
+        <img src={'/img/img_lobster.jpg'} alt='lobster' />
       </div>
     </section>
   );
@@ -124,7 +126,7 @@ const Contact = React.memo(() => {
   return (
     <section className={styles.contact}>
       <div className={styles.imgPart}>
-        <img src={'/img/img_coop.jpg'} />
+        <img src={'/img/img_coop.jpg'} alt='hands' />
       </div>
       <form className={styles.formPart}>
         <UnderImgLinks className={styles.formPart_title} to={LINKS.contact}>

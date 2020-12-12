@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  LinkWrapper,
-  UnderImgLinks,
-} from '../../../components/Components';
+import { Button, UnderImgLinks } from '../../../components/Components';
 import { LINKS } from '../../../utils/constants';
 import styles from './About.module.scss';
 
@@ -12,6 +8,8 @@ export default function About() {
     <>
       <Intro />
       <Cooperation />
+      <Sponsor />
+      <Events />
     </>
   );
 }
@@ -92,7 +90,7 @@ const Cooperation = () => {
           <UnderImgLinks className={styles.about_link} to={LINKS.about}>
             WSPÓŁPRACA
           </UnderImgLinks>
-          <img src={'/img/aboutPage/img_aboutPage-coop.jpg'} />
+          <img src={'/img/aboutPage/img_aboutPage-coop.jpg'} alt='painting' />
         </div>
         <div className={styles.actionPart}>
           <p>
@@ -107,6 +105,65 @@ const Cooperation = () => {
           >
             napisz do nas
           </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Sponsor = () => {
+  return (
+    <section className={styles.sponsor}>
+      <div className={` ${styles.content} content`}>
+        <div className={styles.imgPart}>
+          <UnderImgLinks className={styles.sponsor_link} to={LINKS.contact}>
+            Permanentnie szukamy sponsorów
+          </UnderImgLinks>
+          <img src={'/img/aboutPage/img_aboutPage-spons.jpg'} alt='painting' />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Events = () => {
+  return (
+    <section className={styles.events}>
+      <div className={` ${styles.content} content`}>
+        <div className={styles.textPart}>
+          <p>
+            Chcemy aby organizowane prze Fundację eventy były otwarte na nowe
+            formy ekspresji, rozrywki, interesujące zdarzenia artystyczne, dobrą
+            rozrywkę.
+          </p>
+          <p>
+            Zaproponowaliśmy kilka stałych punktów, które będą (mamy nadzieję)
+            na stałe wpisywać się w kalendarz wrocławskich wydarzeń
+            artystyczno-kulturalych.
+          </p>
+          <ul>
+            <li>
+              Czytamy wiersze: wiersze młodych poetów czytane przez nich samych
+              i czytanie wierszy mniej lub bardziej znanych poetów przez
+              lektorów
+            </li>
+            <li>
+              Wieczór francuski: recital piosenki francuskiej po francusku
+            </li>
+            <li>Wieczory jazzowo-bluesowe</li>
+            <li>Scena wolna: Sztuki teatralne</li>
+            <li>Wieczór z winylami</li>
+            <li>Stand up / kabaret</li>
+            <li>Muzyka klasyczna — koncerty</li>
+            <li>Wystawy prac artystycznych</li>
+            <li>Warsztaty tematyczne</li>
+          </ul>
+        </div>
+        <div className={styles.imgPart}>
+          <UnderImgLinks className={styles.events_link} to={LINKS.contact}>
+            a jakie są Wydarzenia?
+          </UnderImgLinks>
+          <img src={'/img/aboutPage/img_aboutPage-art.jpg'} alt='sculpture' />
         </div>
       </div>
     </section>

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import styles from './Cart.module.scss';
 import { Button, Image, Input, Select } from '../../../components/Components';
+import { useStore } from '../../../providers/StoreProvider';
 
 const CartRouteLinks = ({ step = 1 }) => {
   return (
@@ -361,7 +362,9 @@ const CartSummary = ({ cart, submittedForm }) => {
   );
 };
 
-export default function Cart({ cart, removeFromCart }) {
+export default function Cart() {
+  const { cart, removeFromCart } = useStore();
+
   const [step, setStep] = useState(1);
   const [submittedForm, setSubmittedForm] = useState({});
 

@@ -25,7 +25,7 @@ const Aside = ({ active, CloseAside }) => {
   );
 };
 
-export default function Header({ cart }) {
+export default function Header() {
   const [asideVisibility, setAsideVisibility] = useState(false);
 
   const CloseAside = () => {
@@ -40,7 +40,7 @@ export default function Header({ cart }) {
           <div className={styles.logoPart}>
             <div onClick={CloseAside} className={styles.cartLogo}>
               <NavLink to='/cart'>
-                <Cart cart={cart} />
+                <Cart />
               </NavLink>
             </div>
             <NavLink to='/'>
@@ -59,7 +59,7 @@ export default function Header({ cart }) {
           </div>
           <div className={styles.divider}></div>
           <div className={styles.navPart}>
-            <Navigation cart={cart} />
+            <Navigation />
           </div>
         </div>
       </header>

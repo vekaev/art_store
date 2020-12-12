@@ -32,9 +32,9 @@ const PaintingCard = React.memo(({ card, AddToCart }) => {
   );
 });
 
-export const PaintingsList = ({ data, error, AddToCart }) => {
-  if (error) return `Error! ${error.message}`;
-  // console.log(data);
+export const PaintingsList = ({ data, AddToCart }) => {
+  if (data.length === 0) return `Error!`;
+
   return (
     <>
       <ul className={styles['card-list']}>

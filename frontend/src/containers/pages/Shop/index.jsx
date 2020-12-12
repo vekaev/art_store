@@ -1,12 +1,9 @@
 import React from 'react';
+import { useStore } from '../../../providers/StoreProvider';
 import { PaintingsList } from '../../PaintingsList/PaintingsList';
 
-export default function Shop({ paintings, paintingsError, AddToCart }) {
-  return (
-    <PaintingsList
-      data={paintings}
-      error={paintingsError}
-      AddToCart={AddToCart}
-    />
-  );
+export default function Shop() {
+  const { paintings, AddToCart } = useStore();
+
+  return <PaintingsList data={paintings} AddToCart={AddToCart} />;
 }

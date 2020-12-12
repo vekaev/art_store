@@ -10,8 +10,10 @@ import {
   AddToCartBtn,
 } from '../../../components/Components';
 import { LINKS } from '../../../utils/constants';
+import { useStore } from '../../../providers/StoreProvider';
 
-export default function PicturePage({ AddToCart, cart }) {
+export default function PicturePage() {
+  const { AddToCart, cart } = useStore();
   const { pictureId } = useParams();
   const { loading, error, data } = useQuery(onePaintingQuery, {
     variables: { id: pictureId },

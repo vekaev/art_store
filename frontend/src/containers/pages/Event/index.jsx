@@ -3,6 +3,7 @@ import styles from './Event.module.scss';
 import { Image } from '../../../components/Components';
 import moment from 'moment';
 import ShowMoreText from 'react-show-more-text';
+import { useStore } from '../../../providers/StoreProvider';
 const EventCard = ({ info }) => {
   // moment(info.date).calendar().split(' ')[0] --> TODAY or date
   return (
@@ -51,7 +52,8 @@ const EventCard = ({ info }) => {
   );
 };
 
-export default function EventsPage({ events = [] }) {
+export default function Event() {
+  const { events } = useStore();
   return (
     <ul className={styles.eventList}>
       {events.map((item, idx) => (

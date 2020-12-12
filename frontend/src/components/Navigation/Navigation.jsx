@@ -16,7 +16,7 @@ const Link = ({ name, link }) => {
   );
 };
 
-export default function Navigation({ cart, includeCart = true }) {
+export default function Navigation({ includeCart = true }) {
   return (
     <nav>
       <ul className={styles.linkList}>
@@ -27,7 +27,7 @@ export default function Navigation({ cart, includeCart = true }) {
         {includeCart && (
           <li>
             <NavLink to='/cart'>
-              <Cart cart={cart} />
+              <Cart />
             </NavLink>
           </li>
         )}
