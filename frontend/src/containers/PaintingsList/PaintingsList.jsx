@@ -7,8 +7,9 @@ const LoadingCard = () => {
   return <li>Hello</li>;
 };
 
-const PaintingCard = React.memo(({ card, AddToCart }) => {
+const PaintingCard = React.memo(({ card, addToCart }) => {
   if (!card) return;
+
   return (
     <li className={styles.card}>
       <Link to={'/shop/' + card.id}>
@@ -21,7 +22,7 @@ const PaintingCard = React.memo(({ card, AddToCart }) => {
         <AddToCartBtn
           className={styles['footer-btn']}
           inCart={card.chosen}
-          onClick={() => AddToCart(card.id)}
+          onClick={() => addToCart(card.id)}
         />
 
         {card.price && (
@@ -32,19 +33,19 @@ const PaintingCard = React.memo(({ card, AddToCart }) => {
   );
 });
 
-export const PaintingsList = ({ data, AddToCart }) => {
+export const PaintingsList = ({ data, addToCart }) => {
   if (data.length === 0) return `Error!`;
 
   return (
     <>
       <ul className={styles['card-list']}>
-        {data.length > 1
+        {data.length > 0
           ? data.map((paint, idx) => {
               return (
-                <PaintingCard key={idx} card={paint} AddToCart={AddToCart} />
+                <PaintingCard key={idx} card={paint} addToCart={addToCart} />
               );
             })
-          : [{}, {}, {}, {}, {}, {}, {}, {}, {}].map((item, idx) => {
+          : new Array(9).fill({}).map((_, idx) => {
               return <LoadingCard key={idx} />;
             })}
       </ul>

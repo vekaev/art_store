@@ -7,7 +7,7 @@ export default function Cart() {
   return (
     <div className={styles.cart}>
       <span className={styles.iconCart}></span>
-      {cart?.length >= 1 && <p className={styles.counter}>{cart?.length}</p>}
+      {cart?.length > 0 && <p className={styles.counter}>{cart?.length}</p>}
     </div>
   );
 }

@@ -13,7 +13,7 @@ import { LINKS } from '../../../utils/constants';
 import { useStore } from '../../../providers/StoreProvider';
 
 export default function PicturePage() {
-  const { AddToCart, cart } = useStore();
+  const { addToCart, cart } = useStore();
   const { pictureId } = useParams();
   const { loading, error, data } = useQuery(onePaintingQuery, {
     variables: { id: pictureId },
@@ -43,7 +43,7 @@ export default function PicturePage() {
             )}
             <AddToCartBtn
               inCart={cart?.find((item) => item?.id === pictureId)}
-              onClick={() => AddToCart(pictureId)}
+              onClick={() => addToCart(pictureId)}
             >
               do koszyka
             </AddToCartBtn>

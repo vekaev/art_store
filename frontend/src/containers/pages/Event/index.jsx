@@ -54,9 +54,10 @@ const EventCard = ({ info }) => {
 
 export default function Event() {
   const { events } = useStore();
+
   return (
     <ul className={styles.eventList}>
-      {events.map((item, idx) => (
+      {events?.map((item, idx) => (
         <EventCard key={idx} info={item} />
       ))}
     </ul>

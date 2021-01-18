@@ -1,6 +1,5 @@
 import { gql } from '@apollo/client';
 
-
 export const allEventsQuery = gql`
   query allEventsQuery {
     events {
@@ -19,11 +18,6 @@ export const allEventsQuery = gql`
     }
   }
 `;
- 
- 
- 
-      
-
 
 export const allPaintingsQuery = gql`
   query allPaintingsQuery {
@@ -57,4 +51,3 @@ export const onePaintingQuery = gql`
     }
   }
 `;
-

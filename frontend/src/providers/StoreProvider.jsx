@@ -13,34 +13,78 @@ export default function StoreProvider({ children }) {
   const [store, setStore] = useState({
     cart: [],
     paintings: [],
+    events: [],
   });
-  const { cart, paintings } = store;
-  const [sortedEvents, setSortedEvents] = useState([]);
+
+  const { cart, paintings, events } = store;
 
   const fetchedPaintings = useQuery(allPaintingsQuery);
   const fetchedEvents = useQuery(allEventsQuery);
 
+  //Start settings of events
+
   useEffect(() => {
     if (fetchedEvents?.data?.events) {
-      const sorted = fetchedEvents?.data?.events
-        ?.slice()
-        .filter((item) => {
-          if (
-            moment(item.date).format('YYYYMMDD') >= moment().format('YYYYMMDD')
-          ) {
-            return item;
-          }
-        })
-        .sort(
-          (a, b) =>
-            moment(a.date).format('YYYYMMDD') -
-            moment(b.date).format('YYYYMMDD')
-        );
-      setSortedEvents(sorted);
-    }
-  }, [fetchedEvents?.data?.events]);
+      const initialList = fetchedEvents?.data?.events?.slice();
 
-  const AddToCart = (id) => {
+      let filteredList = initialList.filter(
+        (event) =>
+          moment(event?.date).format('YYYYMMDD') >= moment().format('YYYYMMDD')
+      );
+
+      if (filteredList.length === 0) {
+        filteredList = initialList;
+      }
+
+      filteredList.sort(
+        (a, b) =>
+          moment(a?.date).format('YYYYMMDD') -
+          moment(b?.date).format('YYYYMMDD')
+      );
+
+      setStore((store) => ({ ...store, events: filteredList }));
+    }
+  }, [fetchedEvents.data]);
+
+  //End settings of events
+
+  useEffect(() => {
+    if (fetchedPaintings?.data && fetchedPaintings?.data.paintings) {
+      let newPaintingList = fetchedPaintings.data?.paintings || [];
+      let newPaintingCart = [];
+
+      if (localStorage.hasOwnProperty('cart')) {
+        const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+
+        newPaintingCart = cartFromLocalStorage.map((cartItem) => {
+          const idx = newPaintingList.findIndex(
+            (item) => item?.id === cartItem?.id
+          );
+          if (idx !== -1) {
+            return cartItem;
+          } else {
+            return null;
+          }
+        });
+
+        newPaintingList = newPaintingList.map((item) => {
+          if (newPaintingCart.find((cartItem) => item?.id === cartItem?.id)) {
+            return { ...item, chosen: true };
+          } else {
+            return { ...item, chosen: false };
+          }
+        });
+      }
+
+      setStore((store) => ({
+        ...store,
+        cart: newPaintingCart,
+        paintings: newPaintingList,
+      }));
+    }
+  }, [fetchedPaintings.data]);
+
+  const addToCart = (id) => {
     const painting = paintings.find((item) => item.id === id);
     const checkForExistingCart = cart.find((item) => item.id === id);
 
@@ -52,10 +96,11 @@ export default function StoreProvider({ children }) {
         return item;
       });
 
-      setStore({
+      setStore((store) => ({
+        ...store,
         cart: [...cart, painting],
         paintings: newPaintingList,
-      });
+      }));
       localStorage.setItem('cart', JSON.stringify([...cart, painting]));
     } else {
       removeFromCart(id);
@@ -76,56 +121,15 @@ export default function StoreProvider({ children }) {
         return item;
       });
 
-      setStore({
-        cart: newCart,
-        paintings: newList,
-      });
+      setStore((store) => ({ ...store, cart: newCart, paintings: newList }));
 
       localStorage.setItem('cart', JSON.stringify(newCart));
     }
   };
 
-  useEffect(() => {
-    let newPaintingList = [];
-    let newPaintingCart = [];
-
-    if (fetchedPaintings?.data && fetchedPaintings?.data.paintings) {
-      newPaintingList = fetchedPaintings.data?.paintings;
-      if (localStorage.hasOwnProperty('cart')) {
-        const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
-
-        newPaintingCart = cartFromLocalStorage.map((cartItem) => {
-          const idx = newPaintingList.findIndex(
-            (item) => item?.id === cartItem?.id
-          );
-          if (idx !== -1) return cartItem;
-        });
-
-        newPaintingList = newPaintingList.map((item) => {
-          if (newPaintingCart.find((cartItem) => item?.id === cartItem?.id)) {
-            return { ...item, chosen: true };
-          } else {
-            return { ...item, chosen: false };
-          }
-        });
-      }
-
-      setStore({
-        cart: newPaintingCart,
-        paintings: newPaintingList,
-      });
-    }
-  }, [fetchedPaintings.data]);
-
   return (
     <StoreContext.Provider
-      value={{
-        cart,
-        paintings,
-        events: sortedEvents,
-        removeFromCart,
-        AddToCart,
-      }}
+      value={{ cart, paintings, events, removeFromCart, addToCart }}
     >
       {children}
     </StoreContext.Provider>
