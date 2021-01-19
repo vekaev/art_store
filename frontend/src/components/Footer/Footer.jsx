@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import { NavLink } from 'react-router-dom';
+import { COMPANY_INFO } from '../../utils/constants';
 
 const Link = ({ name, link }) => {
   return (
@@ -52,8 +53,7 @@ export default function Footer() {
             <ul className={styles['contact-list']}>
               <p>Od poniedziałku do piątku:</p>
               <p>od 10:00 do 17:00</p>
-              <a href='tel:+48 604 305 569'>+48 604 305 569</a>
-              <a href='tel:+48 604 305 569'>+48 604 305 569</a>
+              <a href={`tel:${COMPANY_INFO.TEL}`}>{COMPANY_INFO.TEL}</a>
               <a href='mailto:kontakt@gallerystore.pl'>
                 kontakt@gallerystore.pl
               </a>

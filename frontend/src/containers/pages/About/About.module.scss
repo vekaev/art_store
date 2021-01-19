@@ -1,5 +1,9 @@
 @import '../../../variable';
 
+main {
+  min-height: unset !important;
+}
+
 section {
   padding: 70px 0;
   h2 {

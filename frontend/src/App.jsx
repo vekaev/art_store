@@ -27,15 +27,15 @@ export default function App() {
       <Header />
       <Switch>
         <>
-          <Route exact path='/about' component={About} />
           <main className='content'>
             <Route exact path='/' component={Main} />
             <Route path='/shop/:pictureId' component={PicturePage} />
             <Route exact path='/shop' component={Shop} />
             <Route path='/cart' component={Cart} />
-            <Route exact path='/contact' component={Contact} />
             <Route exact path='/events' component={EventsPage} />
           </main>
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
         </>
       </Switch>
       <Footer />
