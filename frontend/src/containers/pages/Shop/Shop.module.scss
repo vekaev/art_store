@@ -1,62 +1,85 @@
 @import '../../../variable';
 
-.titlePart {
-  margin-top: 30px;
-
-  display: flex;
-  flex-direction: column;
-  .goBack {
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-    margin-bottom: 60px;
-    &:hover {
-      opacity: 1;
-    }
-
-    @media (max-width: 767px) {
-    }
-  }
-
-  .title {
-    display: inline-block;
-    font-family: Butler Stencil;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 34px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-  }
-}
 
 section.intro {
   display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
   .slider {
-    max-width: 600px;
+    position: relative;
+    max-width: 60%;
     width: 100%;
     margin-right: 20px;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+
+    .title {
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      display: inline-block;
+      font-family: Butler Stencil;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 34px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      background-color: $body-bcg;
+      text-transform: uppercase;
+      color: black;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     img {
       object-fit: cover !important;
     }
   }
+
   .info {
     max-width: 35%;
     width: 100%;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+
     .pricePart {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin-bottom: 40px;
+      @media (max-width: 767px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
       .price {
         font-weight: 900;
         font-size: 25px;
         line-height: 30px;
         margin-right: 20px;
+        margin-bottom: 20px;
+        @media (max-width: 767px) {
+          margin-top: 15px;
+          margin-bottom: 0;
+          max-width: 35%;
+          overflow: hidden;
+        }
       }
 
       // .arrow {
       // }
     }
+
     .description {
       font-weight: normal;
       font-size: 14px;
@@ -64,4 +87,133 @@ section.intro {
       white-space: pre-line;
     }
   }
+}
+
+//PAINTING PAGE
+
+.painting {
+  .titlePart {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+    .goBack {
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+
+
+      .paintingName {
+        display: none;
+        text-transform: uppercase;
+        font-family: Butler Stencil;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 31px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 0;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+
+        &:before {
+          position: absolute;
+          left: 15px;
+        }
+
+        //TODO: Create dotted overflow of word wrap
+        .paintingName {
+          display: inline-block;
+          width: calc(100% - 80px);
+          text-align: center;
+          overflow: hidden;
+        }
+      }
+    }
+
+
+  }
+}
+
+section.author {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    padding: 50px 15px;
+    margin: 0 -15px;
+    background: white;
+  }
+
+  .textPart {
+    max-width: 50%;
+    margin-right: 50px;
+    @media (max-width: 767px) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+    b {
+      display: block;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 41px;
+      margin-bottom: 10px;
+
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  .imgPart {
+    position: relative;
+    max-width: 50%;
+    @media (max-width: 767px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .about_link {
+      position: absolute;
+      top: -30px;
+      background-color: $body-bcg;
+      text-transform: uppercase;
+      left: -100px;
+      pointer-events: none;
+      color: black;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 46px;
+      @media (max-width: 767px) {
+
+        display: block;
+        position: initial;
+        background: unset;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      &::before {
+        display: none;
+      }
+    }
+
+    .imgWrapper {
+      max-width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
 }

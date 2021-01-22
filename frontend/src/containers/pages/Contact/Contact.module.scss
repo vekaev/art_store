@@ -8,12 +8,14 @@ section.contact {
   @media (max-width: 767px) {
     padding: 0;
   }
+
   .formWrapper {
     display: flex;
     @media (max-width: 767px) {
       flex-direction: column-reverse;
     }
   }
+
   .imgPart {
     display: flex;
     flex-direction: column;
@@ -24,10 +26,12 @@ section.contact {
       flex-direction: column-reverse;
       max-width: unset;
     }
+
     img {
       width: 100%;
     }
   }
+
   .formPart {
     max-width: 450px;
     width: 100%;
@@ -40,6 +44,7 @@ section.contact {
     @media (max-width: 520px) {
       align-items: start;
     }
+
     &_title {
       padding: 19px 15px 9px;
       max-width: 500px;
@@ -49,13 +54,16 @@ section.contact {
       @media (max-width: 767px) {
         display: none;
       }
+
       &:hover {
         color: black;
       }
+
       &:after {
         display: none;
       }
     }
+
     h1 {
       font-weight: bold;
       font-size: 0;
@@ -69,18 +77,21 @@ section.contact {
         line-height: 40px;
       }
     }
+
     &_input {
       margin-bottom: 40px;
       min-height: 46px;
       @media (max-width: 767px) {
         width: 100%;
       }
+
       input,
       select,
       textarea {
         padding-bottom: 20px;
       }
     }
+
     &_btn {
       max-width: 190px;
       margin: 30px auto;
@@ -104,6 +115,7 @@ section.additional {
     padding-bottom: 0;
     background: unset;
   }
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -111,6 +123,7 @@ section.additional {
       flex-direction: column;
     }
   }
+
   .textPart {
     margin-right: 50px;
     max-width: 450px;
@@ -123,21 +136,25 @@ section.additional {
         display: none !important;
       }
     }
+
     .title {
       font-weight: bold;
       font-size: 38px;
       line-height: 46px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 18px;
       line-height: 25px;
     }
+
     img {
       display: block;
       max-height: 350px;
       margin: 15px auto 70px;
     }
+
     .links {
       display: flex;
       flex-direction: column;
@@ -148,6 +165,7 @@ section.additional {
           display: none;
         }
       }
+
       a {
         display: block;
         font-weight: 900;
@@ -155,6 +173,7 @@ section.additional {
         line-height: 41px;
         color: $color-rose;
       }
+
       p {
         margin: 12px auto;
         max-width: 180px;
@@ -164,6 +183,7 @@ section.additional {
       }
     }
   }
+
   .imgPart {
     padding-top: 50px;
     max-width: 350px;
@@ -179,6 +199,7 @@ section.additional {
         display: none;
       }
     }
+
     img {
       width: 100%;
       margin-bottom: 26px;
@@ -186,6 +207,7 @@ section.additional {
         display: none;
       }
     }
+
     p {
       margin-bottom: 26px;
       font-size: 18px;

@@ -33,44 +33,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
-      <change afterPath="$PROJECT_DIR$/src/utils/apolloClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/event/config/routes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/event/controllers/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/event/models/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/event/models/event.settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/event/services/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/components/event/events.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/database.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/functions/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/functions/cron.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/functions/responses/404.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/extensions/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PaintingsList/PaintingsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/extensions/users-permissions/config/jwt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/uploads/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PaintingsList/queries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/pages/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pages/Shop/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b9e1f1852953f87fcf0cdfbd0de990477700325" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/292aa025bdbb55da7f3307a8758045de1735aea2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d67691333633e849af94af966942f0c1b3151c6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f8230138bca13e3b2b8dbcf754b3313aa4c51cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/318a36074599bd801b64cf364f364de4bb95f2dd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31d6af40518151d6b40dcf0330234196bc6fde28" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/539f4ec7294b75fbd11a69bbbb6d573044926317" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/551ad58edbf10a92051cc32d9b4625726127caeb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c8dac08c2c204c1acf95aea38b2b18900fcb984" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cd4b0ca2f82495fc7ab61263188c4e48a419add" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82f7d60ee54d7c8e5df1f84a670ecb9f5ee5177e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/884d8189a27f14cc30b0d9eb6b931c29740e2066" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf17af4a1f9d60d6ac4399d0f1fad5d506a87fbb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c995f22f01487e9f5f619642e3ee96d07e3bba81" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d122e49dcc824c8e201965063220ca72efa86d06" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9ca00af4cc4c96633c99b767d458351b62daa5f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1ffde31bb2c5e3b0920d6d349b9b77048f8c847" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa2f8e5ec88b7183ad43cb8773c6d10bc045650d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/author/models/author.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/author/models/author.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/painting/models/painting.settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/painting/models/painting.settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/bcg_button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/bcg_button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/cart_underline.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/cart_underline.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/crossBtn.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/crossBtn.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/divider-line.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/divider-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-first.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-first.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-second.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-second.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-third.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hamburger/ham-third.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/header_curtain.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/header_curtain.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/about.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/about.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/contact.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/contact.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/cooperation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/cooperation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/events.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/events.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/link.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/link.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/hoverBcg/shop.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/hoverBcg/shop.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_arrow-down.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_arrow-down.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_arrowLeft.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_arrowLeft.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_cart.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_done.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_done.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_info.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_info.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_longArrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_longArrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_michelangelo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_michelangelo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_phone.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/icon_smile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/icon_smile.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/img_date-wrapper.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/img_date-wrapper.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/main_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/main_logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/select_arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/select_arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/select_underline.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/select_underline.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/shop_border.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/shop_border.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/Contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/Contact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Event/Event.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Event/Event.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/Shop.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/Shop.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/picturePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/picturePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/queries/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/queries/queries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sliderAdditional.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sliderAdditional.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/apolloClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/apolloClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/production.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack/production.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/serve/development.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack/serve/development.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +144,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -99,7 +155,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -150,6 +206,8 @@
       <workItem from="1602402297438" duration="9501000" />
       <workItem from="1602439916856" duration="164000" />
       <workItem from="1603002247999" duration="6337000" />
+      <workItem from="1611159129089" duration="6325000" />
+      <workItem from="1611219033803" duration="3970000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -179,66 +237,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;create header and footer&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;create header and footer&quot;" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="184" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602401071021">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601799911104" />
-    <state x="184" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1602401071021" />
-    <state x="386" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603007763215">
-      <screen x="0" y="23" width="1440" height="808" />
-    </state>
-    <state x="386" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1601798936275" />
-    <state x="386" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.808@0.23.1440.808" timestamp="1603007763215" />
-    <state x="335" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603086724110">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="335" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.797@0.23.1440.797" timestamp="1603086724110" />
-    <state width="1152" height="191" key="GridCell.Tab.0.bottom" timestamp="1603087766223">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602402293315" />
-    <state width="1152" height="191" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1603087766223" />
-    <state width="1152" height="199" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603002310912" />
-    <state width="1152" height="199" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1603007687214" />
-    <state width="1152" height="191" key="GridCell.Tab.0.center" timestamp="1603087766223">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602402293314" />
-    <state width="1152" height="191" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1603087766223" />
-    <state width="1152" height="199" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603002310911" />
-    <state width="1152" height="199" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1603007687213" />
-    <state width="1152" height="191" key="GridCell.Tab.0.left" timestamp="1603087766222">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602402293310" />
-    <state width="1152" height="191" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1603087766222" />
-    <state width="1152" height="199" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603002310911" />
-    <state width="1152" height="199" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1603007687213" />
-    <state width="1152" height="191" key="GridCell.Tab.0.right" timestamp="1603087766223">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602402293315" />
-    <state width="1152" height="191" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1603087766223" />
-    <state width="1152" height="199" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603002310912" />
-    <state width="1152" height="199" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1603007687214" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1601806737589">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601806737589" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601873915476">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1601873915476" />
-    <state x="677" y="179" width="693" height="522" key="find.popup" timestamp="1603086700611">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="677" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1602403381873" />
-    <state x="677" y="179" width="693" height="522" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1603086700611" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1601796413569">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1601796413569" />
   </component>
 </project>

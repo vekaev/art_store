@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
+
   .link {
     //margin: 0 20px;
     a {
@@ -30,26 +31,33 @@
         line-height: 20px;
       }
     }
+
     a:hover {
       color: $color-rose;
     }
+
     .activeLink {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
     }
+
     .activeLink.events {
       background-image: url('/img/hoverBcg/events.svg');
     }
+
     .activeLink.about {
       background-image: url('/img/hoverBcg/about.svg');
     }
+
     .activeLink.shop {
       background-image: url('/img/hoverBcg/shop.svg');
     }
+
     .activeLink.contact {
       background-image: url('/img/hoverBcg/contact.svg');
     }
+
     &:first-child {
       @media (max-width: 1300px) {
         a {
@@ -65,6 +73,7 @@
 
   transition: 0.2s ease;
   align-items: center;
+
   .iconCart {
     display: inline-block;
     width: 50px;
@@ -83,6 +92,7 @@
       height: 35px;
     }
   }
+
   .counter {
     font-weight: normal;
     font-size: 30px;
@@ -99,6 +109,7 @@
     .iconCart {
       background-color: black;
     }
+
     .counter {
       color: black;
     }

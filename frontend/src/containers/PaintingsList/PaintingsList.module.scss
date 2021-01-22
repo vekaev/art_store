@@ -13,6 +13,7 @@
   padding: 12px;
   max-width: 380px;
   min-height: 600px;
+
   &-img {
     background-color: $body-bcg;
     display: inline-block;
@@ -26,29 +27,35 @@
     font-size: 26px;
     line-height: 41px;
   }
+
   .info {
     margin-top: 12px;
     font-size: 18px;
     line-height: 25px;
   }
+
   .type {
     margin-top: 5px;
     font-weight: bold;
     font-size: 18px;
     line-height: 27px;
   }
+
   &:nth-child(1),
   &:nth-child(6),
   &:nth-child(8) {
     background: rgba(196, 196, 196, 0.2);
   }
+
   footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .footer-btn {
       margin-bottom: 15px;
     }
+
     .footer-price {
       display: flex;
       align-items: center;

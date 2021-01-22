@@ -2,10 +2,12 @@
 
 .eventList {
   margin-top: 100px;
+
   .event {
     padding: 40px;
     display: flex;
     margin-bottom: 40px;
+
     .imgWrapper {
       display: inline-block;
       max-width: 360px;
@@ -15,21 +17,26 @@
 
       max-height: 360px;
       margin-right: 40px;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     &:nth-child(3n + 1) {
       background-color: #f6f3eb;
     }
+
     &:nth-child(3n + 3) {
       background-color: #f6f3eb;
     }
+
     .infoList {
       display: flex;
       flex-direction: column;
+
       li {
         display: flex;
         margin-bottom: 24px;
@@ -39,6 +46,7 @@
           font-size: 30px;
           line-height: 41px;
         }
+
         .title {
           font-weight: 900;
           font-size: 20px;
@@ -46,6 +54,7 @@
           min-width: 70px;
           margin-right: 20px;
         }
+
         .info,
         .time {
           font-weight: normal;
@@ -53,8 +62,10 @@
           line-height: 25px;
         }
       }
+
       .timeWrapper {
         align-items: center;
+
         .info {
           background-image: url('/img/hoverBcg/link.svg');
           background-size: 100%;
@@ -63,21 +74,25 @@
           background-repeat: no-repeat;
           background-position: center;
         }
+
         .time {
           margin-left: 20px;
         }
       }
     }
+
     .showMoreBtn {
       font-weight: bold;
       font-size: 18px;
       line-height: 27px;
     }
+
     .showLess {
       margin-top: 40px;
       float: right;
       display: block;
     }
+
     // h2,
     // .infoList,
     // .infoList li {

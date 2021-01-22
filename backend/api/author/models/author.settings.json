@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "authors",
   "info": {
-    "name": "Author"
+    "name": "Author",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,10 +14,10 @@
     "paintings": {
       "collection": "painting"
     },
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Avatar": {
+    "avatar": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -27,8 +28,17 @@
       "plugin": "upload",
       "required": false
     },
-    "Bio": {
+    "bio": {
       "type": "text"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "string"
     }
   }
 }

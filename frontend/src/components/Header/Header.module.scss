@@ -34,13 +34,16 @@
       display: none;
     }
   }
+
   &:before {
     left: 0;
   }
+
   &:after {
     right: 0;
     transform: scale(-1, 1);
   }
+
   .logoPart {
     padding: 25px 0;
     display: flex;
@@ -53,16 +56,19 @@
       padding: 10px 0;
       justify-content: space-between;
     }
+
     a {
       display: flex;
       align-items: center;
     }
+
     .cartLogo {
       display: none;
       @media (max-width: 767px) {
         display: unset;
       }
     }
+
     .logoImg {
       display: inline-block;
       min-width: 110px;
@@ -73,6 +79,7 @@
       mask: url('/img/main_logo.svg') no-repeat center / contain;
       -webkit-mask: url('/img/main_logo.svg') no-repeat center / contain;
       transition: background-color 0.2s ease;
+
       &:hover {
         background-color: $color-rose;
       }
@@ -138,9 +145,11 @@
           transition: all 0.5s ease;
           top: 50%;
         }
+
         span {
           opacity: 0;
         }
+
         &::after {
           width: 36px;
           transform: rotate(45deg);
@@ -162,6 +171,7 @@
         @media (min-width: 769px) {
           display: none !important;
         }
+
         &.active {
           right: 0;
         }
@@ -239,26 +249,32 @@
     height: calc(100vh - 20vh);
     transition: 1s ease;
     padding-bottom: 50px;
+
     .AsidePhoneNumber {
       margin-top: 100px;
     }
   }
+
   &.active {
     opacity: 1;
     background: rgba(0, 0, 0, 0.16);
     backdrop-filter: blur(4px);
     pointer-events: unset;
+
     .asideContent {
       right: 0;
       opacity: 1;
     }
   }
+
   ul {
     flex-direction: column;
+
     li {
       width: 100%;
       text-align: center;
       display: grid;
+
       a {
         padding: 20px 0 !important;
         font-weight: normal !important;

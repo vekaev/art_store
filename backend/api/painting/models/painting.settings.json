@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
     "img": {
@@ -25,13 +25,13 @@
       "plugin": "upload",
       "required": false
     },
-    "Depiction": {
+    "depiction": {
       "type": "text"
     },
     "price": {
       "type": "integer"
     },
-    "Sold": {
+    "sold": {
       "type": "boolean"
     },
     "author": {

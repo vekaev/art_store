@@ -6,6 +6,7 @@ main {
 
 section {
   padding: 70px 0;
+
   h2 {
     color: $color-rose;
     font-family: Butler Stencil;
@@ -15,12 +16,14 @@ section {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
+
   h3 {
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
     line-height: 41px;
   }
+
   p {
     overflow-wrap: break-word;
     font-size: 18px;
@@ -30,6 +33,7 @@ section {
   .column {
     max-width: 380px;
     margin-bottom: 80px;
+
     &:nth-child(2) {
       align-self: flex-end;
     }
@@ -51,15 +55,19 @@ section.intro {
     width: 100%;
     display: flex;
     flex-direction: column;
+
     .column {
       &:nth-child(1) {
       }
+
       &:nth-child(2) {
         align-self: flex-end;
+
         h3 {
           display: flex;
           align-items: center;
           white-space: nowrap;
+
           &::after {
             content: '';
             width: 120px;
@@ -87,6 +95,7 @@ section.intro {
           }
         }
       }
+
       &:nth-child(3) {
         margin-bottom: 0;
       }
@@ -96,6 +105,7 @@ section.intro {
 
 section.cooperation {
   padding-top: 120px;
+
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -103,13 +113,16 @@ section.cooperation {
     grid-column-gap: 100px;
     grid-row-gap: 20px;
     justify-content: space-between;
+
     .textPart {
       display: flex;
       flex-direction: column;
       grid-area: 1 / 1 / 4 / 2;
+
       h3 {
         color: $color-rose;
       }
+
       .column {
         &:nth-child(1) {
           h3 {
@@ -121,6 +134,7 @@ section.cooperation {
             background-image: url("data:image/svg+xml,%3Csvg width='209' height='11' viewBox='0 0 209 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.723805 11C53.1208 9.5925 106.511 10.6716 160.233 6.89552C175.675 5.74627 192.934 5.74627 208.375 4.10448C209.26 3.9403 209.18 0 208.295 0C154.573 5.25373 100.146 2.74071 47.025 5.48143C25.2542 6.60467 16.165 7.38806 0.723805 6.89552C-0.241268 6.89552 -0.241268 11 0.723805 11Z' fill='black'/%3E%3C/svg%3E%0A");
           }
         }
+
         &:nth-child(2) {
           h3 {
             display: inline-block;
@@ -133,6 +147,7 @@ section.cooperation {
             background-image: url("data:image/svg+xml,%3Csvg width='107' height='45' viewBox='0 0 107 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M85.3362 6.62473C71.8597 5.8577 58.8499 2.5704 45.5485 0.707593C34.7556 -0.82648 23.5544 -0.00465497 13.6366 4.54278C9.37782 6.46037 4.0689 9.25457 1.26859 12.9802C-1.76508 16.9797 1.38527 21.6915 3.01878 25.6363C4.944 30.1289 6.22747 36.4844 10.8947 39.2786C15.4452 42.018 21.6292 43.0042 26.8797 43.7164C40.2979 45.5244 54.2994 45.0861 67.7759 44.4287C74.8934 44.0999 82.0108 43.5521 89.0699 42.785C93.3871 42.2919 97.9959 41.5249 101.73 39.3334C109.956 34.4024 107.447 25.4719 101.73 19.7191C97.8209 15.8292 92.862 12.761 87.9615 10.0216C82.8276 7.06304 77.402 4.59756 71.6263 3.0087C57.5665 -0.881268 42.6898 2.73476 28.5716 4.65235C24.7795 5.14545 20.9874 5.69333 17.1953 6.18643C13.6366 6.67952 9.84454 6.84389 6.40249 7.7205C3.71886 8.43275 1.32693 11.8296 4.47728 13.5828C5.06068 13.9116 5.23569 12.5419 4.71064 12.2679C4.88566 11.7748 5.06068 11.2817 5.23569 10.7886C5.23569 9.47373 5.93577 8.81627 7.33593 8.92584C7.80264 8.81627 8.26936 8.76148 8.79442 8.70669C10.1362 8.54232 11.4197 8.32317 12.7615 8.1588C15.7952 7.7205 18.8289 7.33698 21.8625 6.89867C27.5215 6.13164 33.2388 5.3646 38.8977 4.54278C49.8656 3.06349 60.6001 1.25548 71.5097 4.26883C81.0774 6.89867 90.1784 11.8844 97.8792 17.8015C101.963 20.9245 106.864 25.6363 106.338 31.0055C105.872 35.7721 101.613 38.5115 97.1208 39.8812C92.5703 41.3057 87.6114 41.5797 82.8859 42.018C77.3436 42.5111 71.743 42.8946 66.2007 43.1138C54.9412 43.6068 43.5649 43.7712 32.3637 42.8946C26.7631 42.4563 21.1624 41.5797 15.8535 39.8265C13.2866 39.0046 10.6613 37.9636 9.02778 35.8269C7.39427 33.6902 6.57751 30.7864 5.52739 28.3757C4.30226 26.0746 3.31048 23.7187 2.31871 21.3628C1.56029 19.5548 1.03523 18.2946 1.26859 16.3223C1.56029 14.0212 2.72709 12.9802 4.47728 11.5557C8.21102 8.6519 12.4115 6.24121 16.9036 4.54278C27.3465 0.598017 38.606 0.707593 49.5156 2.62518C61.4169 4.70714 73.2598 7.2274 85.4529 7.93965C86.0363 7.99444 85.9779 6.67952 85.3362 6.62473Z' fill='black'/%3E%3C/svg%3E%0A");
           }
         }
+
         &:nth-child(3) {
           padding: 70px 57px;
           box-sizing: content-box;
@@ -145,19 +160,23 @@ section.cooperation {
         }
       }
     }
+
     .imgPart {
       grid-area: 1 / 2 / 3 / 3;
       position: relative;
+
       .about_link {
         position: absolute;
         top: -30px;
         background-color: $body-bcg;
         left: -100px;
         pointer-events: none;
+
         &::after {
           display: none;
         }
       }
+
       img {
         width: 100%;
         object-fit: contain;
@@ -167,8 +186,10 @@ section.cooperation {
         height: 100%;
       }
     }
+
     .actionPart {
       grid-area: 3 / 2 / 4 / 3;
+
       p {
         max-width: 90%;
         width: 100%;
@@ -180,6 +201,7 @@ section.cooperation {
 
       .link_btn {
         position: relative;
+
         &::after {
           position: absolute;
           bottom: -250px;
@@ -202,11 +224,14 @@ section.cooperation {
 
 section.sponsor {
   background: rgb(255, 255, 255);
+
   .content {
     padding: 2 0px 0;
+
     .imgPart {
       display: inline-block;
       position: relative;
+
       .sponsor_link {
         position: absolute;
         top: -60px;
@@ -215,10 +240,12 @@ section.sponsor {
         pointer-events: none;
         color: $color-rose;
         max-width: 497px;
+
         &::after {
           display: none;
         }
       }
+
       img {
         width: 100%;
         object-fit: contain;
@@ -237,6 +264,7 @@ section.events {
     display: flex;
     justify-content: space-between;
     position: relative;
+
     &::after {
       position: absolute;
       bottom: -170px;
@@ -253,21 +281,26 @@ section.events {
       transform: rotate(60deg);
       background-image: url("data:image/svg+xml,%3Csvg width='261' height='211' viewBox='0 0 261 211' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M207.455 3.76479C214.805 21.9991 222.11 40.2577 229.461 58.4921C229.716 58.4166 230.018 58.3167 230.274 58.2412C220.449 40.2455 211.503 21.7871 203.392 3.00718C203.219 2.5663 202.298 2.16438 202.478 2.956C204.459 11.547 194.038 18.9222 188.789 24.1079C181.223 31.5173 173.704 38.9024 166.138 46.3118C166.448 46.5627 166.757 46.8135 167.02 47.0888C168.647 38.7269 176.844 32.4038 182.407 26.58C189.23 19.4434 196.053 12.3068 202.9 5.2164C203.289 4.83399 202.542 3.75006 202.084 4.22746C194.803 11.8415 187.476 19.4799 180.195 27.0939C174.768 32.7277 167.661 38.5368 166.097 46.57C166.012 46.9694 166.589 47.7294 166.979 47.347C175.255 39.2678 183.554 31.1179 191.831 23.0386C196.966 17.9724 205.394 11.5275 203.514 3.23858C203.209 3.22152 202.905 3.20446 202.6 3.1874C210.738 22.1305 219.733 40.6815 229.607 58.7697C229.899 59.3251 230.715 59.1912 230.42 58.5189C223.07 40.2846 215.765 22.0259 208.414 3.79161C208.071 3.02677 207.158 2.9756 207.455 3.76479Z' fill='black'/%3E%3Cpath d='M202.846 3.76704C203.351 37.0688 195.622 70.3314 180.566 100.004C164.185 132.323 139.164 159.793 108.668 179.33C90.8911 190.695 71.4437 199.334 51.0416 204.812C50.4132 204.965 50.9296 206.171 51.4411 206.02C87.6392 196.307 120.963 176.641 146.929 149.619C170.881 124.721 188.061 93.6951 196.911 60.3156C201.77 42.0377 204.092 23.2045 203.815 4.26152C203.781 3.74757 202.829 2.94862 202.846 3.76704Z' fill='black'/%3E%3C/svg%3E%0A");
     }
+
     .textPart {
       margin-top: 50px;
       max-width: 380px;
       width: 100%;
+
       p {
         font-weight: normal;
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 22px;
+
         &:nth-child(2) {
           color: $color-rose;
         }
       }
+
       ul {
         max-width: 365px;
+
         li {
           padding-left: 20px;
           margin-bottom: 20px;
@@ -275,6 +308,7 @@ section.events {
           font-weight: normal;
           font-size: 18px;
           line-height: 25px;
+
           &::before {
             content: '';
             position: absolute;
@@ -287,9 +321,11 @@ section.events {
         }
       }
     }
+
     .imgPart {
       display: inline-block;
       position: relative;
+
       .events_link {
         position: absolute;
         top: -60px;
@@ -297,10 +333,12 @@ section.events {
         pointer-events: none;
         background-color: $body-bcg;
         max-width: 340px;
+
         &::after {
           display: none;
         }
       }
+
       img {
         width: 100%;
         object-fit: contain;
