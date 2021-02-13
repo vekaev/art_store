@@ -9,15 +9,16 @@ const LoadingCard = () => {
 };
 
 const PaintingCard = React.memo(({card, addToCart}) => {
+    console.log(card)
     if (!card) return;
 
     return (
         <li className={styles.card}>
-            <Link to={LINKS.shop + '/' + card.id}>
-                <Image className={styles['card-img']} src={card.img[0].url}/>
+            <Link to={LINKS.shop + '/' + card?.id}>
+                <Image className={styles['card-img']} src={card.img && card?.img[0].url}/>
                 <p className={styles.title}>{card?.name}</p>
                 {card.author && <p className={styles.info}>{card?.author?.name}</p>}
-                {card.size && <b className={styles.type}>{card.size?.title}</b>}
+                {card.size && <b className={styles.type}>{card?.size?.title}</b>}
             </Link>
             <footer>
                 <AddToCartBtn

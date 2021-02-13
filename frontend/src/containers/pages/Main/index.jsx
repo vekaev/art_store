@@ -5,12 +5,30 @@ import moment from 'moment';
 import {NavLink} from 'react-router-dom';
 import {LINKS} from '../../../utils/constants';
 import {useStore} from '../../../providers/StoreProvider';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import SwiperCore, {Pagination} from "swiper";
+
+SwiperCore.use([Pagination]);
+
+const IntroMobile = () => {
+    return (
+        <Swiper
+            slidesPerView={1}
+            pagination={{clickable: true}}
+        >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+        </Swiper>
+    )
+}
 
 export default function Main() {
     const {events, paintings} = useStore();
 
     return (
         <>
+            <IntroMobile/>
             <Intro events={events}/>
             {paintings.length >= 9 && <MainShop paintings={paintings}/>}
             <About/>

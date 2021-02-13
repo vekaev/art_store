@@ -16,10 +16,28 @@ export default function StoreProvider({children}) {
         events: [],
     });
 
+    const [loadings, setLoadings] = useState({
+        fetchPaintings: false,
+        fetchedEvents: false
+    })
     const {cart, paintings, events} = store;
 
-    const fetchedPaintings = useQuery(allPaintingsQuery);
-    const fetchedEvents = useQuery(allEventsQuery);
+    const fetchedPaintings = useQuery(allPaintingsQuery,
+        // {
+        //     variables: {
+        //         start: 0,
+        //         limit: 1
+        //     },
+        // }
+    );
+    const fetchedEvents = useQuery(allEventsQuery,
+        // {
+        //     variables: {
+        //         start: 0,
+        //         limit: 12
+        //     },
+        // }
+    );
 
     //Start settings of events
 
@@ -127,9 +145,24 @@ export default function StoreProvider({children}) {
         }
     };
 
+    const getMorePaintings = async () => {
+        const {data} = await fetchedPaintings.fetchMore({
+            variables: {
+                start: paintings.length,
+                limit: 10
+            },
+        })
+
+        //TODO: add more paintings function
+        setTimeout(() => {
+            console.log(store)
+            // setStore( store => ({...store, paintings: [...store.paintings, data]}))
+        }, 2000)
+    }
+
     return (
         <StoreContext.Provider
-            value={{cart, paintings, events, removeFromCart, addToCart}}
+            value={{cart, paintings, events, removeFromCart, addToCart, getMorePaintings, loadings}}
         >
             {children}
         </StoreContext.Provider>

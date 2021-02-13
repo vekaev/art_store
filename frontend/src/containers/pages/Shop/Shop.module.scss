@@ -1,4 +1,4 @@
-@import '../../../variable';
+@import 'src/styles/variable';
 
 
 section.intro {
@@ -100,6 +100,7 @@ section.intro {
     @media (max-width: 767px) {
       margin-top: 0;
     }
+
     .goBack {
       opacity: 0.8;
       transition: opacity 0.2s ease;
@@ -161,6 +162,7 @@ section.author {
       max-width: 100%;
       margin-right: 0;
     }
+
     b {
       display: block;
       font-weight: 900;
@@ -183,6 +185,7 @@ section.author {
       max-width: 100%;
       margin-bottom: 20px;
     }
+
     .about_link {
       position: absolute;
       top: -30px;
@@ -202,6 +205,7 @@ section.author {
         margin-bottom: 20px;
         text-align: center;
       }
+
       &::before {
         display: none;
       }

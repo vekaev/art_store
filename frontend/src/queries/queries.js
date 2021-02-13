@@ -1,8 +1,8 @@
 import {gql} from '@apollo/client';
 
 export const allEventsQuery = gql`
-  query allEventsQuery {
-    events {
+  query allEventsQuery ($start: Int, $limit: Int) {
+    events (start: $start, limit: $limit) {
       id
       title 
       description
@@ -20,8 +20,8 @@ export const allEventsQuery = gql`
 `;
 
 export const allPaintingsQuery = gql`
-  query allPaintingsQuery {
-    paintings {
+  query allPaintingsQuery ($start: Int, $limit: Int) {
+    paintings (start: $start, limit: $limit) {
       id
       name
       price

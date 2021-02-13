@@ -35,7 +35,7 @@ const CartItem = ({card, removeFromCart}) => {
     return (
         <li className={styles.cartCard}>
             <div className={styles.img}>
-                <Image src={card?.img[0]?.url}/>
+                <Image src={card.img && card?.img[0]?.url}/>
             </div>
             <div className={styles.infoList}>
                 <p className={styles.Name}>{card?.name}</p>
