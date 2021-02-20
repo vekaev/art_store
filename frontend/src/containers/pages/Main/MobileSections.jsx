@@ -1,11 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './MainMobile.module.scss';
-import {Image} from "../../../components/Components";
+import {Image, UnderImgLinks} from "../../../components/Components";
 
+export const SliderIntro = ({title, link, img, additionalImg, description}) => (
 
-const SliderIntro = ({title, link, img, description}) => (
     <div className={styles.sliderPage}>
-        <Image/>
-        <div className={styles.slider}></div>
+        <div className={styles.imgPart}>
+            {img ? <Image src={img}/> : <img src={additionalImg} alt={title}/>}
+        </div>
+        <div className={styles.textPart}>
+            <UnderImgLinks className={styles.textPart_title} to={link}>
+                {title}
+            </UnderImgLinks>
+            <p>{description}</p>
+        </div>
     </div>
 )

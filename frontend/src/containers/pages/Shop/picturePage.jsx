@@ -21,10 +21,10 @@ export default function PicturePage() {
     const {painting} = data;
 
     return (
-        <>
+        <main className='content'>
             <Painting painting={painting} addToCart={addToCart} cart={cart} pictureId={pictureId}/>
             {painting.author && <Authort author={painting.author}/>}
-        </>
+        </main>
 
     );
 }
@@ -63,7 +63,9 @@ const Painting = ({painting, addToCart, pictureId, cart}) => {
 }
 
 const Authort = ({author}) => {
-    const {bio, avatar, name, facebook, email, tel} = author;
+    const {bio, avatar, name,
+        // facebook, email, tel
+    } = author;
     console.log(author, avatar?.url)
     return (
         <section className={styles.author}>
@@ -78,7 +80,7 @@ const Authort = ({author}) => {
                 <div className={styles.imgWrapper}>
                     {avatar?.url ?
                         <Image src={avatar?.url} alt={'avatar'}/> :
-                        <img src={'/img/img_lobster.jpg'}/>
+                        <img src={'/img/img_lobster.jpg'} alt={'lobster'}/>
                     }
                 </div>
             </div>

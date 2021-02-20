@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {AddToCartBtn, Image} from '../../components/Components';
 import styles from './PaintingsList.module.scss';
 import {LINKS} from "../../utils/constants";
+import {Error} from "../../components/Error/Error";
 
 const LoadingCard = () => {
     return <li>Hello</li>;
@@ -36,7 +37,7 @@ const PaintingCard = React.memo(({card, addToCart}) => {
 });
 
 export const PaintingsList = ({data, addToCart}) => {
-    if (data.length === 0) return `Error!`;
+    if (data.length === 0) return <Error code={'Ooops!'} message={'Coś poszło nie tak'}/>;
 
     return (
         <>

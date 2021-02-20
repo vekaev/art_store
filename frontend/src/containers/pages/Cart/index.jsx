@@ -382,7 +382,7 @@ export default function Cart() {
     }
 
     return (
-        <>
+        <main className='content'>
             <CartRouteLinks step={step}/>
             <Switch>
                 <Route
@@ -414,6 +414,6 @@ export default function Cart() {
                     />
                 )}
             </Switch>
-        </>
+        </main>
     );
 }

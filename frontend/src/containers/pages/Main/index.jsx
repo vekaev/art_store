@@ -7,19 +7,46 @@ import {LINKS} from '../../../utils/constants';
 import {useStore} from '../../../providers/StoreProvider';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, {Pagination} from "swiper";
+import {SliderIntro} from "./MobileSections";
+import {MAIN_PAGE_TEXT} from "./text";
 
 SwiperCore.use([Pagination]);
-
-const IntroMobile = () => {
+const IntroMobile = ({events, paintings}) => {
+    console.log(paintings);
     return (
-        <Swiper
-            slidesPerView={1}
-            pagination={{clickable: true}}
-        >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-        </Swiper>
+        <div style={{margin: '0 -15px'}}>
+            <Swiper
+                slidesPerView={1}
+                pagination={{clickable: true}}
+            >
+                <SwiperSlide>
+                    <SliderIntro
+                        title={MAIN_PAGE_TEXT.about.title}
+                        description={MAIN_PAGE_TEXT.about.description}
+                        additionalImg={MAIN_PAGE_TEXT.about.img}
+                        link={LINKS.about}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <SliderIntro
+                        title={MAIN_PAGE_TEXT.events.title}
+                        description={MAIN_PAGE_TEXT.events.description}
+                        img={events[0]?.img?.url}
+                        additionalImg={MAIN_PAGE_TEXT.events.img}
+                        link={LINKS.events}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <SliderIntro
+                        title={MAIN_PAGE_TEXT.shop.title}
+                        description={MAIN_PAGE_TEXT.shop.description}
+                        img={paintings[0]?.img[0]?.url}
+                        additionalImg={MAIN_PAGE_TEXT.shop.img}
+                        link={LINKS.shop}
+                    />
+                </SwiperSlide>
+            </Swiper>
+        </div>
     )
 }
 
@@ -27,13 +54,13 @@ export default function Main() {
     const {events, paintings} = useStore();
 
     return (
-        <>
-            <IntroMobile/>
+        <main className='content'>
+            <IntroMobile events={events} paintings={paintings}/>
             <Intro events={events}/>
             {paintings.length >= 9 && <MainShop paintings={paintings}/>}
             <About/>
             <Contact/>
-        </>
+        </main>
     );
 }
 
@@ -42,18 +69,18 @@ const Intro = React.memo(({events = []}) => {
 
     return (
         <section className={styles.introDesktop}>
-      <span className={styles.imgPart}>
-        <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
-          Wydarzenia
-        </UnderImgLinks>
-        <div className={styles.imgPart_wrapper}>
-            {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> : <img src={'/img/img_hand-down.jpg'}/>}
-
-        </div>
-        <p className={styles.imgPart_info}>
-          Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
-        </p>
-      </span>
+            <div className={styles.imgPart}>
+                <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
+                    {MAIN_PAGE_TEXT.events.title}
+                </UnderImgLinks>
+                <div className={styles.imgPart_wrapper}>
+                    {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> :
+                        <img src={MAIN_PAGE_TEXT.events.img} alt={'hands'}/>}
+                </div>
+                <p className={styles.imgPart_info}>
+                    Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
+                </p>
+            </div>
             <div className={styles.textPart}>
                 <p className={styles.textPart_date}>
                     {moment(lastEvent?.date).format('DD.MM')}
@@ -71,12 +98,7 @@ const MainShop = React.memo(({paintings}) => {
         <section className={styles.shop}>
             <h2 className={styles.shop_title}>Sklep</h2>
             <p className={styles.shop_description}>
-                W naszym sklepie znajdziecie prace różnych artystów. Zarówno tych
-                doświadczonych, jak i tych początkujących. Wybierajcie, podziwiajcie
-                i kupujcie! Zyski ze sprzedaży przeznaczone są na bieżące funkcjonowanie
-                Fundacji a więc kupując u nas wspierasz młodych artystów! Istnieje
-                możliwość zamawiania prac u każdego artysty. Idealny i oryginalny pomysł
-                na prezent!
+                {MAIN_PAGE_TEXT.shop.description}
             </p>
             <ul className={styles.cardList}>
                 {paintings.slice(0, 12).map((item, idx) => {
@@ -121,7 +143,7 @@ const About = React.memo(() => {
                 <UnderImgLinks className={styles.about_link} to={LINKS.about}>
                     czym siĘ zajmujemy?
                 </UnderImgLinks>
-                <img src={'/img/img_lobster.jpg'} alt='lobster'/>
+                <img src={MAIN_PAGE_TEXT.about.img} alt='lobster'/>
             </div>
         </section>
     );

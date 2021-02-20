@@ -25,7 +25,7 @@ const Aside = ({active, CloseAside}) => {
     );
 };
 
-export default function Header() {
+export function Header() {
     const [asideVisibility, setAsideVisibility] = useState(false);
 
     const CloseAside = () => {

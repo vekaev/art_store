@@ -1,3 +1,10 @@
 @import '~swiper/swiper';
 @import '~swiper/components/navigation/navigation';
 @import '~swiper/components/pagination/pagination';
+
+.swiper-pagination{
+  bottom: 0!important;
+  &-bullet{
+    background-color: $color-rose;
+  }
+}

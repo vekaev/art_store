@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import {NavLink} from 'react-router-dom';
-import {COMPANY_INFO} from '../../utils/constants';
+import {COMPANY_INFO, LINKS} from '../../utils/constants';
 
 const Link = ({name, link}) => {
     return (
@@ -13,7 +13,7 @@ const Link = ({name, link}) => {
     );
 };
 
-export default function Footer() {
+export function Footer() {
     return (
         <footer className='content'>
             <ul className={styles['info-list']}>
@@ -21,11 +21,10 @@ export default function Footer() {
                     <div className={styles['imp-part']}></div>
                     <div className={styles['text-part']}>
                         <ul className={styles['link-list']}>
-                            <Link link={'about'} name={'O Fundacji'}/>
-                            <Link link={'events'} name={'Wydarzenia'}/>
-                            <Link link={'shop'} name={'Sklep'}/>
-                            <Link link={'cooperation'} name={'Współpraca'}/>
-                            <Link link={'contact'} name={'Kontakt'}/>
+                            <Link link={LINKS.events} name={'Wydarzenia'}/>
+                            <Link link={LINKS.shop} name={'Sklep'}/>
+                            <Link link={LINKS.about} name={'O Fundacji / Współpraca'}/>
+                            <Link link={LINKS.contact} name={'Kontakt'}/>
                         </ul>
                     </div>
                 </li>
@@ -35,15 +34,10 @@ export default function Footer() {
                         <ul className={styles['link-list']}>
                             <Link link={'webregulations'} name={'Regulamin strony'}/>
                             <Link
-                                link={'consumerregulations'}
-                                name={'Regulamin konsumenta'}
+                                link={'shopregulations'}
+                                name={'Regulamin Vive Art'}
                             />
-                            <Link
-                                link={'sponsorregulations'}
-                                name={'Regulamin dla sponsora'}
-                            />
-                            <Link link={'artistregulations'} name={'Regulamin dla artysta'}/>
-                            <Link link={'privacypolicy'} name={'Polityka prywatnosci'}/>
+                            <Link link={'privacypolicy'} name={'Polityka prywatności'}/>
                         </ul>
                     </div>
                 </li>
@@ -54,8 +48,8 @@ export default function Footer() {
                             <p>Od poniedziałku do piątku:</p>
                             <p>od 10:00 do 17:00</p>
                             <a href={`tel:${COMPANY_INFO.TEL}`}>{COMPANY_INFO.TEL}</a>
-                            <a href='mailto:kontakt@gallerystore.pl'>
-                                kontakt@gallerystore.pl
+                            <a href={`mailto:${COMPANY_INFO.EMAIL}`}>
+                                {COMPANY_INFO.EMAIL}
                             </a>
                         </ul>
                     </div>

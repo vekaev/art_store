@@ -63,8 +63,6 @@ K
 frontend/src/utils/index.js,3/0/305df3e132a4116686ef80dbe573e806ec51768f
 B
 frontend/README.md,6/a/6a3a36e34dda2b89c027f00ac950371695b13c75
-B
-frontend/yarn.lock,0/4/04586714c95c899ad1586d536fdc0d2cc67af8e3
 C
 frontend/.gitignore,e/2/e23a63a9f05477a70f6e75d709dbb4eae2db742d
 R
@@ -79,3 +77,15 @@ U
 %frontend/webpack/production.config.js,2/5/250ef222e87bfb905b32dc92d414c066a5589523
 E
 frontend/src/index.js,0/9/09a4e53ab0e5e7637fd01136f19a9bb570e1ef2d
+i
+9frontend/src/containers/pages/Main/MainMobile.module.scss,b/e/bec8ee29aad9c615868a505c4d5c55b057aebbd2
+e
+5frontend/src/containers/pages/Main/MobileSections.jsx,8/9/899b3eb06ba6b9003f40b10dd3ee35064d647b66
+J
+frontend/public/index.html,5/3/53b461857fde9b76a1c6e79a500050ceffbd7f33
+]
+-frontend/src/containers/pages/Event/index.jsx,c/b/cbdda9b80ed8bbfaf10ada699a7e7a9e4adb64ec
+Z
+*frontend/src/containers/pages/Main/text.js,8/0/80a34d892726a80e4bfe56580d878c5ea07101e6
+T
+$backend/build/main.dc652785.chunk.js,a/7/a79753fa5ea7368dd2e3d90158b3f4f614f5bcde

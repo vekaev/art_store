@@ -33,38 +33,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
-      <change afterPath="$PROJECT_DIR$/frontend/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MainMobile.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MobileSections.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/styles/_swiper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04586714c95c899ad1586d536fdc0d2cc67af8e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/_variable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/precache-manifest.dff7a92252c4374e438de68e7a560391.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/precache-manifest.dff7a92252c4374e438de68e7a560391.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.49cffd1f.chunk.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/css/main.49cffd1f.chunk.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.9e7c2c89.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/2.9e7c2c89.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation/Navigation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/Contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Contact/Contact.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Event/Event.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Event/Event.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MainMobile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MainMobile.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MobileSections.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MobileSections.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/Shop.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/Shop.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/picturePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Shop/picturePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/queries/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/queries/queries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/sliderAdditional.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/_sliderAdditional.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/apolloClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/apolloClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/_swiper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/_swiper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +81,10 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
   </component>
   <component name="ProjectId" id="1iOzPZ9M2q3DChGWdwVbU9jRql4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -87,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,11 +108,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/public/design/images" />
       <recent name="$PROJECT_DIR$/public/design/images/hoverBcg" />
       <recent name="$PROJECT_DIR$/public/design/fonts" />
-      <recent name="$PROJECT_DIR$/src/containers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src" />
@@ -154,7 +161,9 @@
       <workItem from="1612306324985" duration="107000" />
       <workItem from="1612604840186" duration="1808000" />
       <workItem from="1612802780715" duration="2771000" />
-      <workItem from="1613215239645" duration="3447000" />
+      <workItem from="1613215239645" duration="5382000" />
+      <workItem from="1613490061316" duration="3424000" />
+      <workItem from="1613803732910" duration="10283000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -184,5 +193,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;create header and footer&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;create header and footer&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
