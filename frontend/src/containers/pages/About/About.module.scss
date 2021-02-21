@@ -107,6 +107,19 @@ section.intro {
 section.cooperation {
   padding-top: 120px;
 
+  @media (max-width: 1440px) {
+    .content{
+      padding: 0 60px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -229,6 +242,29 @@ section.sponsor {
   .content {
     padding: 2 0px 0;
 
+    @media screen and (max-width: 872px) {
+      .imgPart {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .sponsor_link{
+        position: static;
+        margin-top: 60px;
+        left: 0;
+        margin-bottom: 30%;
+        max-width: 80%;
+        padding: 0 15px;
+      }
+
+      img {
+        position: static;
+        display: block;
+        margin-top: 30%;
+      }
+    }
+
     .imgPart {
       display: inline-block;
       position: relative;
@@ -255,6 +291,12 @@ section.sponsor {
 
         height: 100%;
       }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .content {
+      padding: 0 60px;
     }
   }
 }
@@ -349,5 +391,17 @@ section.events {
         height: 100%;
       }
     }
+  }
+
+  @media (max-width: 1440px) {
+    .content{
+      padding: 0 60px;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  section.events {
+    display: none;
   }
 }
