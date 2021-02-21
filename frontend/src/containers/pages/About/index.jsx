@@ -6,9 +6,9 @@ import styles from './About.module.scss';
 export const About = React.memo(() => {
     return (
         <>
-            <Intro/>
+            {/* <Intro/>*/}
             <Cooperation/>
-            <Sponsor/>
+            <Sponsor/> 
             <Events/>
         </>
     );
