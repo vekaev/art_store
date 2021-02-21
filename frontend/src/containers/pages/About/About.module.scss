@@ -2,6 +2,13 @@
 
 main {
   min-height: unset !important;
+
+  overflow-x: hidden;
+    
+}
+
+@media screen and (max-width: 1440px) {
+  overflow-x: hidden; 
 }
 
 section {
@@ -42,6 +49,13 @@ section {
 }
 
 section.intro {
+
+  @media screen and (max-width: 1440px) {
+    .content {
+      padding: 0 60px;
+    }
+  }
+
   background-color: #ded9d4;
 
   // .content {
@@ -107,16 +121,45 @@ section.intro {
 section.cooperation {
   padding-top: 120px;
 
-  @media (max-width: 1440px) {
+  @media screen and (max-width: 1440px) {
     .content{
-      padding: 0 60px;
+      padding: 0 45px;
+
+      .column {
+        padding-right: 10px;
+
+        &:nth-child(3) {
+          padding: 70px 57px;
+          box-sizing: content-box;
+          width: 110%;
+
+          background-image: url("data:image/svg+xml,%3Csvg width='433' height='331' viewBox='0 0 433 331' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M66.9082 257.059C131.759 322.021 220.755 346.568 302.924 321.122C342.871 308.699 383.703 285.049 413.284 250.323C426.684 234.607 434.522 214.999 432.752 192.247C430.982 169.196 421.249 147.941 409.871 129.68C357.915 46.6073 267.149 21.7602 184.6 14.8749C161.972 13.0787 138.838 10.6838 116.083 12.3303C95.6043 13.8271 77.4006 21.6105 64.127 40.7697C51.1063 59.6295 41.878 83.2792 34.7988 106.18C27.4668 130.279 22.7894 155.575 21.146 181.021C20.2611 193.444 20.1347 205.868 20.7668 218.292C21.2725 227.422 22.1574 237.151 27.7196 244.037C34.4196 252.419 45.7969 255.861 54.6459 259.753C65.3912 264.393 76.2628 268.584 87.3873 272.177C131.506 286.696 177.268 293.132 222.904 295.377C246.417 296.575 269.93 296.575 293.443 296.126C316.577 295.677 339.711 294.629 362.592 290.288C373.085 288.342 383.451 285.498 393.564 281.756C400.39 279.212 408.354 276.967 414.169 271.877C420.364 266.489 423.65 257.508 425.673 248.976C431.741 222.782 428.454 193.444 422.765 167.699C416.192 137.314 404.688 107.078 386.232 84.0275C376.877 72.3524 366.132 65.1677 354.249 57.534C339.711 48.1041 325.3 38.6742 310.383 29.9927C289.145 17.4195 267.402 7.5405 243.762 3.64879C211.147 -1.88941 177.521 0.206125 144.653 1.40357C123.416 2.30166 101.293 4.24752 82.9628 18.4672C66.2761 31.4895 54.2667 51.6964 43.0158 70.7059C29.7422 93.3078 17.6064 117.257 7.11401 141.954C3.06874 151.534 -0.850115 162.011 0.161203 173.088C1.17252 184.164 6.73477 193.594 11.7914 202.575C25.697 227.422 39.6026 252.269 53.3818 277.116C58.944 286.995 64.0006 298.221 71.0798 306.753C77.7798 314.836 86.2496 317.68 95.6043 318.129C119.37 319.326 143.263 318.129 167.029 317.979C168.419 317.979 168.293 314.237 166.902 314.237C144.148 314.387 121.266 314.986 98.5118 314.536C86.8817 314.237 77.2742 311.243 69.5629 300.466C62.8629 291.037 57.5535 279.81 51.7384 269.632C38.9705 246.881 26.329 224.129 13.5612 201.378C6.48194 188.655 -0.597285 176.381 2.94233 160.515C5.84986 147.343 12.4234 134.919 17.9857 123.094C28.8573 100.792 40.4875 79.3874 53.2554 59.0308C65.3912 39.7219 79.1704 21.4608 98.7646 13.0787C118.612 4.54688 140.482 5.29528 161.214 4.69656C177.774 4.24751 194.334 3.79847 210.768 4.3972C233.902 5.1456 256.909 8.28891 278.779 17.5691C303.556 28.0468 326.564 43.7633 349.571 58.5818C361.581 66.3652 373.085 73.2505 382.945 84.6263C392.173 95.4033 399.632 108.276 405.699 121.897C417.582 148.69 424.915 179.225 426.305 209.46C427.19 227.721 427.443 257.658 412.652 269.183C406.079 274.422 397.23 276.817 389.771 279.511C379.026 283.253 368.028 285.798 356.903 287.744C335.919 291.336 314.555 292.084 293.317 292.533C208.493 294.479 118.233 289.839 39.3498 248.826C34.0403 246.132 29.2366 242.839 26.329 236.702C23.2951 230.416 23.0423 222.782 22.7894 215.597C22.2838 202.575 22.5366 189.553 23.6743 176.68C25.697 151.983 30.5007 127.585 37.9592 104.235C45.2912 81.3333 54.8988 56.3365 69.5629 38.5245C84.3534 20.1137 104.959 15.773 125.691 15.773C169.557 15.4736 214.813 19.3653 257.794 29.843C296.351 39.4226 334.022 56.0372 366.132 83.5785C381.049 96.4511 394.701 111.419 406.079 128.782C418.72 148.091 429.971 171.142 430.982 195.989C432.12 223.381 417.582 243.139 400.643 259.304C384.967 274.272 367.649 286.995 349.445 297.323C275.745 338.785 189.025 336.989 116.716 292.533C99.2703 281.906 82.9628 268.884 68.0459 253.766C66.6553 252.568 65.8968 256.161 66.9082 257.059Z' fill='black'/%3E%3C/svg%3E%0A");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .imgPart {
+        height: 75%;
+        padding-right: 40px;
+
+        img {
+          max-height: 447px;
+          min-width: 314px;
+          padding-right: 20px;
+        }
+      }
+
+      .actionPart {
+        margin-top: -70px;
+      }
     }
   }
 
-  @media (max-width: 320px) {
+  @media screen and (max-width: 320px) {
     .content {
-      display: flex;
-      flex-direction: column;
+      justify-content: center;//TODO: I couldn't add flex, and tried to use <--this, it doesn't work
     }
   }
 
@@ -242,29 +285,6 @@ section.sponsor {
   .content {
     padding: 2 0px 0;
 
-    @media screen and (max-width: 872px) {
-      .imgPart {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .sponsor_link{
-        position: static;
-        margin-top: 60px;
-        left: 0;
-        margin-bottom: 30%;
-        max-width: 80%;
-        padding: 0 15px;
-      }
-
-      img {
-        position: static;
-        display: block;
-        margin-top: 30%;
-      }
-    }
-
     .imgPart {
       display: inline-block;
       position: relative;
@@ -295,8 +315,33 @@ section.sponsor {
   }
 
   @media (max-width: 1440px) {
+    width: 100%;
     .content {
       padding: 0 60px;
+    }
+  }
+
+  @media screen and (max-width: 872px) {
+
+    .imgPart {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sponsor_link{
+      position: static;
+      margin-top: 60px;
+      left: 0;
+      margin-bottom: 30%;
+      max-width: 80%;
+      padding: 0 15px;
+    }
+
+    img {
+      position: static;
+      display: block;
+      margin-top: 30%;
     }
   }
 }
@@ -401,8 +446,6 @@ section.events {
 
   @media screen and (max-width: 1040px) {
     .content {
-      display: flex;
-      justify-content: space-around;
 
       &::after {
         position: absolute;
@@ -424,6 +467,9 @@ section.events {
 
     .textPart {
       padding: 0 60px;
+      li {
+        font-size: 8px !important;//TODO: help, i can't rewrite even with important 
+      }
     }
 
     .imgPart {
@@ -437,3 +483,5 @@ section.events {
     display: none;
   }
 }
+
+//TODO: when the size of wp 767px - there is a white streak on the right side o_o
