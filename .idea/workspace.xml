@@ -47,7 +47,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
   </component>
   <component name="ProjectId" id="1iOzPZ9M2q3DChGWdwVbU9jRql4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,7 +132,7 @@
       <workItem from="1613490061316" duration="3424000" />
       <workItem from="1613803732910" duration="12066000" />
       <workItem from="1613983481709" duration="657000" />
-      <workItem from="1613991717083" duration="10009000" />
+      <workItem from="1613991717083" duration="10132000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -148,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614004918414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="resolve">
+      <created>1614006975826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614006975826</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
