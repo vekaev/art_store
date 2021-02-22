@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Components.module.scss';
 import ImageGallery from 'react-image-gallery';
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, useHistory} from 'react-router-dom';
 
 export const UnderImgLinks = ({className, children, to}) => {
     return (
@@ -144,10 +144,11 @@ export const Select = ({
 };
 
 export const GoBackBtn = ({href, className, children}) => {
+    const history = useHistory();
     return (
-        <Link to={href} className={`${styles.goBackBtn} ${className}`}>
+        <div onClick={() => history.goBack()}  className={`${styles.goBackBtn} ${className}`}>
             {children}
-        </Link>
+        </div>
     );
 };
 

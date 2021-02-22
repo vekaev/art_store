@@ -1,8 +1,14 @@
 @import 'src/styles/variable';
-
+.content{
+  display: flex;
+  flex-direction: column;
+}
 section.introDesktop {
   margin: 100px 0 150px;
   display: flex;
+  @media (max-width: 767px) {
+    order: 3;
+  }
 
   .imgPart {
     width: 560px;
@@ -87,22 +93,60 @@ section.introDesktop {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  @media (max-width: 768px) {
+    display: flex;
+    background-image: none;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    padding: 15px;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+
+  }
 
   &_title {
     text-align: center;
     font-family: Butler Stencil;
-    margin-top: 40px;
     font-weight: bold;
     font-size: 38px;
     line-height: 46px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    display: block;
+
+    &:after {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 0 10px;
+      text-align: start;
+      padding: 0;
+
+      &:after {
+        display: inline-block;
+      }
+    }
+    @media (max-width: 600px) {
+      font-size: 26px;
+      line-height: 31px;
+      &:after {
+        width: 39px;
+        height: 21px;
+      }
+    }
   }
 
   &_link {
     margin-top: 30px;
     margin-bottom: 50px;
+    @media (max-width: 768px) {
+      display: none;
+
+    }
+
   }
 
   &_description {
@@ -112,18 +156,87 @@ section.introDesktop {
     max-width: 38%;
     right: 30px;
     background-color: $body-bcg;
+    @media (max-width: 1100px) {
+      right: 50px;
+      transform: translateY(-120%);
+      font-size: 12px;
+      max-width: 33%;
+    }
+    @media (max-width: 768px) {
+      position: static;
+      transform: unset;
+      right: unset;
+      max-width: 100%;
+      padding: 0;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .textPart {
+    @media (max-width: 768px) {
+      margin-right: 30px;
+    }
+    @media (max-width: 700px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+
+    }
   }
 
   .cardList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      background-image: url('/img/shop_border.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-width: 50%;
+      max-width: 50%;
+      flex: 0 50%;
+    }
+    @media (max-width: 700px) {
+      margin: 0 -10px;
+      background-image: none;
+      overflow: scroll;
+      flex: unset;
+      min-width: 100%;
+      max-width: 100%;
+      flex-wrap: unset;
+      justify-content: flex-start;
+    }
 
     &_item {
       position: relative;
       flex-basis: calc(25% - 30px);
       margin: 15px;
-
+      min-width: 200px;
       box-sizing: border-box;
+      @media (max-width: 768px) {
+        flex: 0 40%;
+        min-width: unset;
+        &:nth-child(n + 4) {
+          display: none
+        }
+        &:last-child {
+          display: initial;
+        }
+      }
+      @media (max-width: 700px) {
+        flex-basis: calc(30% - 30px);
+        flex: unset;
+        min-width: 25%;
+        margin: 10px;
+        &:nth-child(n + 7) {
+          display: initial
+        }
+      }
+      @media (max-width: 600px) {
+        min-width: 40%;
+      }
 
       &::before {
         content: '';
@@ -139,19 +252,23 @@ section.introDesktop {
         width: 100%;
 
         img {
-          width: 100%;
+          width: 101%;
           height: 100%;
           object-fit: cover;
         }
       }
     }
   }
+
 }
 
 section.about {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   .textPart {
     max-width: 500px;
@@ -189,7 +306,9 @@ section.about {
 
 section.contact {
   display: flex;
-
+  @media (max-width: 768px) {
+    display: none;
+  }
   .imgPart {
     margin-right: 30px;
     max-width: 570px;

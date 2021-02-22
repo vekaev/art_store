@@ -89,3 +89,27 @@ Z
 *frontend/src/containers/pages/Main/text.js,8/0/80a34d892726a80e4bfe56580d878c5ea07101e6
 T
 $backend/build/main.dc652785.chunk.js,a/7/a79753fa5ea7368dd2e3d90158b3f4f614f5bcde
+P
+ frontend/public/img/crossBtn.svg,4/4/44d03e7f04423673cd7694d93ab5de082b34b208
+V
+&frontend/public/img/cart_underline.svg,6/7/67b0bd59446e4ac13f486df19dd5b660c1c7a9da
+R
+"frontend/public/img/bcg_button.svg,1/0/10b894dae88ff8766727c58999519977484e901c
+c
+3frontend/build/static/js/main.fa9b9d32.chunk.js.map,a/1/a1621981f6566d510096a4a51be6369d8d1193bd
+a
+1frontend/src/components/Footer/Footer.module.scss,7/c/7c7183d3c69e6764c426a092cb26bd337adfaacb
+_
+/frontend/src/components/Error/Error.module.scss,f/2/f245e8a25bde0274da414d22d94f7ed867629f21
+a
+1frontend/src/components/Navigation/Navigation.jsx,0/3/03892baa6baf71162a8124869b67467a48025e43
+V
+&frontend/src/components/Error/Error.js,4/0/40c69c4e6762c3d72cb9726dde03a42801e487c5
+Y
+)frontend/src/components/Header/Header.jsx,7/b/7bef1c050297a5a11d35dbeafe93e439466c099d
+Y
+)frontend/src/components/Footer/Footer.jsx,d/b/db3a029e0426e9577621830455fd91e31d1002d9
+P
+ frontend/src/components/index.js,4/1/416f766fe4275a9821cba47a9f27ae103956ffc2
+X
+(frontend/public/img/img_date-wrapper.svg,8/c/8cd80dd492d86b41dcbb35025cda04c3b5d0a242

@@ -1,10 +1,35 @@
+@import 'src/styles/variable';
 @import '~swiper/swiper';
 @import '~swiper/components/navigation/navigation';
 @import '~swiper/components/pagination/pagination';
 
-.swiper-pagination{
-  bottom: 0!important;
-  &-bullet{
-    background-color: $color-rose;
+.swiper-pagination {
+  bottom: 0 !important;
+
+  &-bullet {
+    background: black;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px !important;
+
+    &:nth-child(3n + 1) {
+      mask: url('/img/slider/bullet-1.svg') no-repeat center / contain;
+      -webkit-mask: url('/img/slider/bullet-1.svg') no-repeat center / contain;
+    }
+
+    &:nth-child(3n + 2) {
+      mask: url('/img/slider/bullet-2.svg') no-repeat center / contain;
+      -webkit-mask: url('/img/slider/bullet-2.svg') no-repeat center / contain;
+    }
+
+    &:nth-child(3n + 3) {
+      mask: url('/img/slider/bullet-3.svg') no-repeat center / contain;
+      -webkit-mask: url('/img/slider/bullet-3.svg') no-repeat center / contain;
+    }
+
+    &-active {
+      background: $color-rose;
+    }
   }
 }

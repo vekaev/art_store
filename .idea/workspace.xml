@@ -37,10 +37,10 @@
       <change afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04586714c95c899ad1586d536fdc0d2cc67af8e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/305df3e132a4116686ef80dbe573e806ec51768f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/305df3e132a4116686ef80dbe573e806ec51768f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
@@ -52,6 +52,8 @@
       <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.jsx" afterDir="false" />
@@ -60,6 +62,7 @@
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Event/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MainMobile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MainMobile.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MobileSections.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/MobileSections.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
@@ -102,7 +105,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -163,7 +166,9 @@
       <workItem from="1612802780715" duration="2771000" />
       <workItem from="1613215239645" duration="5382000" />
       <workItem from="1613490061316" duration="3424000" />
-      <workItem from="1613803732910" duration="10283000" />
+      <workItem from="1613803732910" duration="12066000" />
+      <workItem from="1613983481709" duration="657000" />
+      <workItem from="1613991717083" duration="7666000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -200,10 +205,13 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
