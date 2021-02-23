@@ -20,33 +20,21 @@ const Intro = () => {
             <div className={` ${styles.content} content`}>
                 <div className={styles.textPart}>
                     <div className={styles.column}>
-                        <h2>Poznaj vive art</h2>
+                        <h2>SZTUKA JEST MOTOREM KULTURY </h2>
                         <p>
-                            Dwóch doświadczonych mężczyzn stwierdziło, że oprócz rodziny,
-                            dzieci, biznesu i szeroko rozumianej aktywności zawodowej w życiu
-                            warto jest znaleźć czas, by zadziałać społecznie. I tak powstała
-                            Fundacja Vive Art - Fundacja z myślą o młodych artystach.
+                        Permanentną cechą naszych czasów jest ZMIANA. Zmienność to nieustanny ruch.Dynamika, która wyzwala dodatkowe pokłady energii. Synergii.I tak powstała Fundacja Vive Art — Fundacja z myślą o ludziach i ich energii. O artystach. Tych nieodkrytych i tych znanych. Wymianie myśli i emocji. Okrywaniu i współodczuwaniu chwil, słów, barw i dźwięków.
                         </p>
                     </div>
                     <div className={styles.column}>
                         <h3>Nasz cel</h3>
                         <p>
-                            Jedni pomagają chorym dzieciom, inni osobom starszym,
-                            a my postanowiliśmy pójść w kierunku rozwoju młodzieży.
-                            <br/>
-                            <br/>
-                            Wymyśliliśmy jak stworzyć warunki, jakich my nigdy nie mieliśmy —
-                            może dlatego nie zostaliśmy artystami
+                        Wiemy jak Wam pomóc byście zaistnieli na scenie, a w każdym razie pomóc zweryfikować Wasz potencjał artystyczny.  Z myślą o Was Stworzyliśmy miejsce w centrum Wrocławia, abyście swoją kreatywnością zaskakiwali, urzekali, a nawet szokowali nie tylko polską, ale i zagraniczną publiczność
                         </p>
                     </div>
                     <div className={styles.column}>
                         <h3>Dla czego?</h3>
                         <p>
-                            Kontakt z młodymi ludźmi, pełnymi własnych pasji i szalonych
-                            pomysłów sprawia, że nasze społeczeństwo się bogaci i każdy z nas
-                            odkrywa w sobie dotąd nieznane pokłady wrażliwości, wzajemnego
-                            szacunku, tolerancji, koleżeńskich zachowań i wiele wiele innych,
-                            których nie sposób tutaj w kilku zdaniach opisać...
+                        Kontakt z ludźmi, pełnymi własnych pasji i oryginalnych pomysłów sprawia, że nasze społeczeństwo nabiera artystycznego bogactwa i każdy z nas odkrywa w sobie nieznane dotąd pokłady wrażliwości, wzajemnego szacunku, tolerancji oraz odkrywa wartości poznawcze.
                         </p>
                     </div>
                 </div>
@@ -61,13 +49,23 @@ const Cooperation = () => {
             <div className={` ${styles.content} content`}>
                 <div className={styles.textPart}>
                     <div className={styles.column}>
-                        <h3>Proste zasady</h3>
-                        <p>
-                            Jeżeli uważasz że jesteś zabawny, potrafisz śpiewać, masz własny
-                            zespół lub chcesz go stworzyć, uważasz, że potrafisz malować,
-                            rysować, piszesz wiersze, tworzysz muzykę… Lub po prostu czujesz,
-                            że jesteś artystą i chcesz rozwijać swoje talenty, napisz do nas!
-                        </p>
+                        <h3>Jeżeli</h3>
+                        <ul>
+                            <li>
+                                cechuje Cię kreatywność i oryginalność
+                            </li>
+                            <li>
+                                potrafisz śpiewać 
+                            </li>
+                            <li>masz własny zespół lub chcesz go stworzyć</li>
+                            <li>malować lub rysować</li>
+                            <li>piszesz wiersze</li>
+                            <li>tworzysz muzykę</li>
+                            <li>lubisz publiczność i występy</li>
+                            <li>
+                                lub po prostu czujesz, że jesteś artystą i chcesz rozwijać swoje talenty — napisz do nas!
+                            </li>
+                        </ul>
                     </div>
                     <div className={styles.column}>
                         <h3>Jak?</h3>
@@ -94,9 +92,7 @@ const Cooperation = () => {
                 </div>
                 <div className={styles.actionPart}>
                     <p>
-                        Stworzyliśmy dla Was miejsce w centrum Wrocławia abyście swoją
-                        kreatywnością zaskakiwali, urzekali a nawet szokowali nie tylko
-                        polską, ale i zagraniczną publiczność.
+                    Historyczna ulica Wrocławia  -  JATKI. Otwieramy naszą przestrzeń dla projektów sztuki i kultury. Łączymy pokolenia, stwarzamy warunki do ekspozycji, nie definiujemy. Poszukujemy…
                     </p>
                     <Button
                         className={styles.link_btn}
