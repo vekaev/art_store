@@ -33,10 +33,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +135,8 @@
       <workItem from="1613490061316" duration="3424000" />
       <workItem from="1613803732910" duration="12066000" />
       <workItem from="1613983481709" duration="657000" />
-      <workItem from="1613991717083" duration="10132000" />
+      <workItem from="1613991717083" duration="14211000" />
+      <workItem from="1614090706051" duration="3826000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -155,7 +159,42 @@
       <option name="project" value="LOCAL" />
       <updated>1614006975826</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="resolve">
+      <created>1614008167018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614008167018</updated>
+    </task>
+    <task id="LOCAL-00005" summary="resolve">
+      <created>1614009030781</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614009030781</updated>
+    </task>
+    <task id="LOCAL-00006" summary="resolve">
+      <created>1614009212341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614009212341</updated>
+    </task>
+    <task id="LOCAL-00007" summary="resolve">
+      <created>1614050920427</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614050920427</updated>
+    </task>
+    <task id="LOCAL-00008" summary="resolve">
+      <created>1614051474379</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614051474379</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

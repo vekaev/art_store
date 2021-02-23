@@ -8,6 +8,7 @@ import {LINKS} from '../../../utils/constants';
 import {useStore} from '../../../providers/StoreProvider';
 import {MAIN_PAGE_TEXT} from "./text";
 import {IntroMobile} from "./MobileSections";
+import ShowMoreText from "react-show-more-text";
 
 
 export default function Main() {
@@ -25,21 +26,38 @@ export default function Main() {
 
 const Intro = React.memo(({events = [], paintings = []}) => {
     let lastEvent = events[0];
-
+    console.log(lastEvent)
     return (
         <>
-            <section className={styles.introDesktop}>
+            <section className={`${styles.introDesktop} ${lastEvent || styles.noEvent}`}>
                 <div className={styles.imgPart}>
-                    <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
-                        {MAIN_PAGE_TEXT.events.title}
-                    </UnderImgLinks>
-                    <div className={styles.imgPart_wrapper}>
-                        {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> :
-                            <img src={MAIN_PAGE_TEXT.events.img} alt={'hands'}/>}
+                    <div className={styles.container}>
+                        <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
+                            {MAIN_PAGE_TEXT.events.title}
+                        </UnderImgLinks>
+                        <div className={styles.imgPart_wrapper}>
+                            {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> :
+                                <img src={MAIN_PAGE_TEXT.events.img} alt={'hands'}/>}
+                        </div>
+                        <p className={styles.imgPart_info}>
+                            Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
+                        </p>
+                        <div className={styles.lastEvent}>
+                            <b>{lastEvent?.title}</b>
+                            <p>{lastEvent?.place}</p>
+                            {lastEvent?.description &&
+                                <ShowMoreText
+                                    keepNewLines
+                                    className={styles.info}
+                                    anchorClass={styles.showMoreBtn}
+                                    more={<span>Czytaj więcej</span>}
+                                    less={<span className={styles.showLess}>Czytaj mniej</span>}
+                                >
+                                    {lastEvent?.description}
+                                </ShowMoreText>
+                            }
+                        </div>
                     </div>
-                    <p className={styles.imgPart_info}>
-                        Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
-                    </p>
                 </div>
                 <div className={styles.textPart}>
                     <p className={styles.textPart_date}>

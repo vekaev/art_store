@@ -19,14 +19,9 @@ export const LinkWrapper = ({href, className, children}) => {
     );
 };
 
-export const Image = ({src, alt, className}) => {
-    const imageUrl =
-        process.env.NODE_ENV !== 'development'
-            ? src
-            : process.env.REACT_APP_BACKEND_URL + src;
-
-    return <img className={className} src={imageUrl} alt={alt}/>;
-};
+export const Image = ({src, alt, className}) => (
+    <img className={className} src={process.env.REACT_APP_BACKEND_URL + src} alt={alt}/>
+)
 
 export const Button = ({
                            type = 'button',
