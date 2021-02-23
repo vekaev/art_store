@@ -50,22 +50,24 @@ const Cooperation = () => {
                 <div className={styles.textPart}>
                     <div className={styles.column}>
                         <h3>Jeżeli</h3>
-                        <ul>
-                            <li>
-                                cechuje Cię kreatywność i oryginalność
-                            </li>
-                            <li>
-                                potrafisz śpiewać 
-                            </li>
-                            <li>masz własny zespół lub chcesz go stworzyć</li>
-                            <li>malować lub rysować</li>
-                            <li>piszesz wiersze</li>
-                            <li>tworzysz muzykę</li>
-                            <li>lubisz publiczność i występy</li>
-                            <li>
-                                lub po prostu czujesz, że jesteś artystą i chcesz rozwijać swoje talenty — napisz do nas!
-                            </li>
-                        </ul>
+                        <div>
+                            <ul>
+                                <li>
+                                    cechuje Cię kreatywność i oryginalność
+                                </li>
+                                <li>
+                                    potrafisz śpiewać 
+                                </li>
+                                <li>masz własny zespół lub chcesz go stworzyć</li>
+                                <li>malować lub rysować</li>
+                                <li>piszesz wiersze</li>
+                                <li>tworzysz muzykę</li>
+                                <li>lubisz publiczność i występy</li>
+                                <li>
+                                    lub po prostu czujesz, że jesteś artystą i chcesz rozwijać swoje talenty — napisz do nas!
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div className={styles.column}>
                         <h3>Jak?</h3>
@@ -103,7 +105,7 @@ const Cooperation = () => {
                     </Button>
                 </div>
             </div>
-        </section>
+        </section>//TODO: I don't understand why does it need onle one parent element o_o
     );
 };
 
