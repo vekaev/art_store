@@ -1,14 +1,17 @@
 import {useQuery} from '@apollo/client';
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import {onePaintingQuery} from '../../../queries/queries';
 
 import styles from './Shop.module.scss';
 import {AddToCartBtn, GoBackBtn, Image, Slider,} from '../../../components/Components';
 import {LINKS} from '../../../utils/constants';
 import {useStore} from '../../../providers/StoreProvider';
+import {Error} from "../../../components";
 
 export default function PicturePage() {
+    const history = useHistory();
+
     const {addToCart, cart} = useStore();
     const {pictureId} = useParams();
     const {loading, error, data} = useQuery(onePaintingQuery, {
@@ -16,7 +19,7 @@ export default function PicturePage() {
     });
 
     if (loading) return 'Loading';
-    if (!data?.painting || error) return 'Error';
+    if (!data?.painting || error) return <Error/>;
 
     const {painting} = data;
 

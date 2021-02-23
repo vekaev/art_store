@@ -1,105 +1,91 @@
 import React, {useState} from 'react';
 import {Button, Image, Input, UnderImgLinks,} from '../../../components/Components';
+
 import styles from './Main.module.scss';
 import moment from 'moment';
 import {NavLink} from 'react-router-dom';
 import {LINKS} from '../../../utils/constants';
 import {useStore} from '../../../providers/StoreProvider';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, {Pagination} from "swiper";
-import {SliderIntro} from "./MobileSections";
 import {MAIN_PAGE_TEXT} from "./text";
+import {IntroMobile} from "./MobileSections";
+import ShowMoreText from "react-show-more-text";
 
-SwiperCore.use([Pagination]);
-const IntroMobile = ({events, paintings}) => {
-    console.log(paintings);
-    return (
-        <div style={{margin: '0 -15px'}}>
-            <Swiper
-                slidesPerView={1}
-                pagination={{clickable: true}}
-            >
-                <SwiperSlide>
-                    <SliderIntro
-                        title={MAIN_PAGE_TEXT.about.title}
-                        description={MAIN_PAGE_TEXT.about.description}
-                        additionalImg={MAIN_PAGE_TEXT.about.img}
-                        link={LINKS.about}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SliderIntro
-                        title={MAIN_PAGE_TEXT.events.title}
-                        description={MAIN_PAGE_TEXT.events.description}
-                        img={events[0]?.img?.url}
-                        additionalImg={MAIN_PAGE_TEXT.events.img}
-                        link={LINKS.events}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SliderIntro
-                        title={MAIN_PAGE_TEXT.shop.title}
-                        description={MAIN_PAGE_TEXT.shop.description}
-                        img={paintings[0]?.img[0]?.url}
-                        additionalImg={MAIN_PAGE_TEXT.shop.img}
-                        link={LINKS.shop}
-                    />
-                </SwiperSlide>
-            </Swiper>
-        </div>
-    )
-}
 
 export default function Main() {
     const {events, paintings} = useStore();
 
     return (
-        <main className='content'>
-            <IntroMobile events={events} paintings={paintings}/>
-            <Intro events={events}/>
-            {paintings.length >= 9 && <MainShop paintings={paintings}/>}
+        <main className={`${styles.content} content`}>
+            <Intro events={events} paintings={paintings}/>
+            <MainShop paintings={paintings}/>
             <About/>
             <Contact/>
         </main>
     );
 }
 
-const Intro = React.memo(({events = []}) => {
+const Intro = React.memo(({events = [], paintings = []}) => {
     let lastEvent = events[0];
-
+    console.log(lastEvent)
     return (
-        <section className={styles.introDesktop}>
-            <div className={styles.imgPart}>
-                <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
-                    {MAIN_PAGE_TEXT.events.title}
-                </UnderImgLinks>
-                <div className={styles.imgPart_wrapper}>
-                    {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> :
-                        <img src={MAIN_PAGE_TEXT.events.img} alt={'hands'}/>}
+        <>
+            <section className={`${styles.introDesktop} ${lastEvent || styles.noEvent}`}>
+                <div className={styles.imgPart}>
+                    <div className={styles.container}>
+                        <UnderImgLinks className={styles.imgPart_link} to={LINKS.events}>
+                            {MAIN_PAGE_TEXT.events.title}
+                        </UnderImgLinks>
+                        <div className={styles.imgPart_wrapper}>
+                            {lastEvent?.img?.url ? <Image src={lastEvent?.img?.url}/> :
+                                <img src={MAIN_PAGE_TEXT.events.img} alt={'hands'}/>}
+                        </div>
+                        <p className={styles.imgPart_info}>
+                            Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
+                        </p>
+                        <div className={styles.lastEvent}>
+                            <b>{lastEvent?.title}</b>
+                            <p>{lastEvent?.place}</p>
+                            {lastEvent?.description &&
+                                <ShowMoreText
+                                    keepNewLines
+                                    className={styles.info}
+                                    anchorClass={styles.showMoreBtn}
+                                    more={<span>Czytaj więcej</span>}
+                                    less={<span className={styles.showLess}>Czytaj mniej</span>}
+                                >
+                                    {lastEvent?.description}
+                                </ShowMoreText>
+                            }
+                        </div>
+                    </div>
                 </div>
-                <p className={styles.imgPart_info}>
-                    Sprawdź naszą liste wydarzeń artystycznych, warsztatów i wystąpień
-                </p>
-            </div>
-            <div className={styles.textPart}>
-                <p className={styles.textPart_date}>
-                    {moment(lastEvent?.date).format('DD.MM')}
-                </p>
-                <p className={styles.info}>
-                    Zobacz wszystkie wydazenia artystyczne które sie odbywaja dzisiaj
-                </p>
-            </div>
-        </section>
+                <div className={styles.textPart}>
+                    <p className={styles.textPart_date}>
+                        {moment(lastEvent?.date).format('DD.MM')}
+                    </p>
+                    <p className={styles.info}>
+                        Zobacz wszystkie wydazenia artystyczne które sie odbywaja dzisiaj
+                    </p>
+                </div>
+            </section>
+            <IntroMobile events={events} paintings={paintings}/>
+        </>
+
     );
 });
 
 const MainShop = React.memo(({paintings}) => {
     return (
         <section className={styles.shop}>
-            <h2 className={styles.shop_title}>Sklep</h2>
-            <p className={styles.shop_description}>
-                {MAIN_PAGE_TEXT.shop.description}
-            </p>
+            <div className={styles.textPart}>
+                <UnderImgLinks className={styles.shop_title} to={LINKS.shop}>
+                    {MAIN_PAGE_TEXT.shop.title}
+                </UnderImgLinks>
+                <p className={styles.shop_description}>
+                    {MAIN_PAGE_TEXT.shop.description}
+                </p>
+            </div>
+
             <ul className={styles.cardList}>
                 {paintings.slice(0, 12).map((item, idx) => {
                     return (
@@ -113,7 +99,16 @@ const MainShop = React.memo(({paintings}) => {
                         </li>
                     );
                 })}
+                <li className={styles.cardList_item} key={'last'}>
+                    <NavLink
+                        className={styles['cardList_item-content']}
+                        to={`/shop`}
+                    >
+                        <img src={'/img/img_more-photos.svg'}/>
+                    </NavLink>
+                </li>
             </ul>
+
             <Button size='large' className={styles.shop_link} href={LINKS.shop}>
                 Idź do sklepu
             </Button>
