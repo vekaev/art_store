@@ -33,13 +33,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
-      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1iOzPZ9M2q3DChGWdwVbU9jRql4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/public/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,11 +87,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public/fonts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/public/design/images" />
       <recent name="$PROJECT_DIR$/public/design/images/hoverBcg" />
-      <recent name="$PROJECT_DIR$/public/design/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src" />
@@ -139,7 +148,7 @@
       <workItem from="1614090706051" duration="3826000" />
       <workItem from="1614150985842" duration="82000" />
       <workItem from="1614192749207" duration="506000" />
-      <workItem from="1614358371259" duration="464000" />
+      <workItem from="1614358371259" duration="21478000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -197,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614051474379</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;create header and footer&quot;">
+      <created>1614359194830</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614359194830</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,9 +232,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;create header and footer&quot;" />
     <MESSAGE value="resolve" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve" />
+    <MESSAGE value="&quot;create header and footer&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;create header and footer&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
