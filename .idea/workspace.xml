@@ -33,10 +33,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Error/Error.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.scss" afterDir="false" />
@@ -137,6 +138,8 @@
       <workItem from="1613983481709" duration="657000" />
       <workItem from="1613991717083" duration="14211000" />
       <workItem from="1614090706051" duration="3826000" />
+      <workItem from="1614150985842" duration="82000" />
+      <workItem from="1614192749207" duration="506000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
