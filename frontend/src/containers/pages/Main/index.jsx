@@ -44,7 +44,7 @@ const Intro = React.memo(({events = [], paintings = []}) => {
                         </p>
                         <div className={styles.lastEvent}>
                             <b>{lastEvent?.title}</b>
-                            <p>{lastEvent?.place}</p>
+                            <p>{`${moment(lastEvent?.date).format('DD.MM')} o ${moment(lastEvent?.date).format('LT')} w ${lastEvent?.place}`}</p>
                             {lastEvent?.description &&
                                 <ShowMoreText
                                     keepNewLines
@@ -56,6 +56,7 @@ const Intro = React.memo(({events = [], paintings = []}) => {
                                     {lastEvent?.description}
                                 </ShowMoreText>
                             }
+                            <Button href={LINKS.events} className={styles.btn} size={'medium'}>dowiedz się więcej</Button>
                         </div>
                     </div>
                 </div>
