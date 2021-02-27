@@ -20,6 +20,7 @@ export default function Main() {
             <MainShop paintings={paintings}/>
             <About/>
             <Contact/>
+            <Button href={LINKS.events} className={styles.MobileLinkbtn} size={'medium'}>dowiedz się więcej</Button>
         </main>
     );
 }
@@ -56,7 +57,6 @@ const Intro = React.memo(({events = [], paintings = []}) => {
                                     {lastEvent?.description}
                                 </ShowMoreText>
                             }
-                            <Button href={LINKS.events} className={styles.btn} size={'medium'}>dowiedz się więcej</Button>
                         </div>
                     </div>
                 </div>
@@ -68,6 +68,7 @@ const Intro = React.memo(({events = [], paintings = []}) => {
                         Zobacz wszystkie wydazenia artystyczne które sie odbywaja dzisiaj
                     </p>
                 </div>
+
             </section>
             <IntroMobile events={events} paintings={paintings}/>
         </>

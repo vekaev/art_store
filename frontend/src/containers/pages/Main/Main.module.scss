@@ -100,6 +100,9 @@ section.introDesktop {
       line-height: 19px;
       margin-bottom: 15px;
     }
+    .info {
+      background-color: #f9f6f0;
+    }
     p{
       background-size: 50%;
       background-position: bottom left;
@@ -108,10 +111,6 @@ section.introDesktop {
       background-image: url("data:image/svg+xml,%3Csvg width='180' height='9' viewBox='0 0 180 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.723805 11C53.1208 9.5925 106.511 10.6716 160.233 6.89552C175.675 5.74627 192.934 5.74627 208.375 4.10448C209.26 3.9403 209.18 0 208.295 0C154.573 5.25373 100.146 2.74071 47.025 5.48143C25.2542 6.60467 16.165 7.38806 0.723805 6.89552C-0.241268 6.89552 -0.241268 8 0.723805 11Z' fill='black'/%3E%3C/svg%3E%0A");
     }
 
-    .btn{
-      font-size: 14px;
-      line-height: 19px;
-    }
   }
 
   .textPart {
@@ -432,5 +431,14 @@ section.contact {
       font-size: 22px;
       line-height: 27px;
     }
+  }
+}
+.MobileLinkbtn{
+  display: none;
+  @media (max-width:768px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 19px;
+    order: 5;
   }
 }
