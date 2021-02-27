@@ -35,7 +35,6 @@
     <list default="true" id="2ca4b99d-a6aa-426d-bb27-ba285d2ca648" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Main/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
