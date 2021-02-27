@@ -34,13 +34,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="&quot;create header and footer&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Components.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/About.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/About/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/providers/StoreProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/PaintingsList/PaintingsList.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +142,7 @@
       <workItem from="1614090706051" duration="3826000" />
       <workItem from="1614150985842" duration="82000" />
       <workItem from="1614192749207" duration="506000" />
-      <workItem from="1614358371259" duration="21478000" />
+      <workItem from="1614358371259" duration="22507000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
@@ -213,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614359194830</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="FINITO">
+      <created>1614451097425</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614451097425</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +235,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="resolve" />
     <MESSAGE value="&quot;create header and footer&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;create header and footer&quot;" />
+    <MESSAGE value="FINITO" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINITO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

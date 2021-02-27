@@ -6,9 +6,7 @@
 @font-face {
   font-family: 'Butler Stencil';
   src: local('Butler Stencil'), local('ButlerStencil'),
-  url('/fonts/Butlerstencil.woff2') format('woff2'),
-  url('/fonts/Butlerstencil.woff') format('woff'),
-  url('/fonts/Butlerstencil.ttf') format('truetype');
+  url('/fonts/ButlerRegularStencil.otf') format('otf');
   font-weight: 400;
   font-style: normal;
 }
@@ -16,9 +14,7 @@
 @font-face {
   font-family: 'Butler Stencil';
   src: local('Butler Stencil Bold'), local('ButlerStencil-Bold'),
-  url('/fonts/Butlerstencilbold.woff2') format('woff2'),
-  url('/fonts/Butlerstencilbold.woff') format('woff'),
-  url('/fonts/Butlerstencilbold.ttf') format('truetype');
+  url('/fonts/ButlerBoldStencil.otf') format('otf');
   font-weight: 700;
   font-style: normal;
 }
@@ -63,11 +59,22 @@ main {
   }
   @media (max-height: 600px) {
     min-height: 300px;
-
   }
 
 }
 
 .image-gallery-left-nav, .image-gallery-right-nav {
   height: 100% !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-height: none;
 }

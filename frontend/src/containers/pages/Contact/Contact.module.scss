@@ -5,10 +5,6 @@ main {
 }
 
 section.contact {
-  @media (max-width: 767px) {
-    padding: 0;
-  }
-
   .formWrapper {
     display: flex;
     @media (max-width: 767px) {

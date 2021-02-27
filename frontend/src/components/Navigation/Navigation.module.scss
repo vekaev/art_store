@@ -73,7 +73,7 @@
 
   transition: 0.2s ease;
   align-items: center;
-
+  position: relative;
   .iconCart {
     display: inline-block;
     width: 50px;
@@ -94,6 +94,8 @@
   }
 
   .counter {
+    right: -20px;
+    position: absolute;
     font-weight: normal;
     font-size: 30px;
     line-height: 41px;
@@ -102,6 +104,7 @@
     @media (max-width: 767px) {
       font-size: 14px;
       line-height: 19px;
+      right: -10px;
     }
   }
 

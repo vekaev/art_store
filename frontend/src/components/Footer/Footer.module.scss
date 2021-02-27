@@ -15,6 +15,7 @@ footer {
     position: relative;
     @media (max-width: 550px) {
       padding: 40px 10px;
+      margin-top: 10px;
       @media (max-width: 415px) {
         justify-content: space-between;
         flex-wrap: nowrap;

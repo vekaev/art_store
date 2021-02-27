@@ -149,14 +149,9 @@ export const GoBackBtn = ({href, className, children}) => {
 
 export const Slider = ({imgArray}) => {
     const imgSet = imgArray.map(({url}) => {
-        const imageUrl =
-            process.env.NODE_ENV !== 'development'
-                ? url
-                : process.env.REACT_APP_BACKEND_URL + url;
-
         return {
-            original: imageUrl,
-            thumbnail: imageUrl,
+            original: process.env.REACT_APP_BACKEND_URL + url,
+            thumbnail: process.env.REACT_APP_BACKEND_URL + url,
         };
     });
     return (

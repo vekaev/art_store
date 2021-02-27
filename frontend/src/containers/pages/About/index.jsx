@@ -8,7 +8,7 @@ export const About = React.memo(() => {
         <>
             <Intro/>
             <Cooperation/>
-            <Sponsor/> 
+            <Sponsor/>
             <Events/>
         </>
     );
@@ -22,19 +22,26 @@ const Intro = () => {
                     <div className={styles.column}>
                         <h2>SZTUKA JEST MOTOREM KULTURY </h2>
                         <p>
-                        Permanentną cechą naszych czasów jest ZMIANA. Zmienność to nieustanny ruch.Dynamika, która wyzwala dodatkowe pokłady energii. Synergii.I tak powstała Fundacja Vive Art — Fundacja z myślą o ludziach i ich energii. O artystach. Tych nieodkrytych i tych znanych. Wymianie myśli i emocji. Okrywaniu i współodczuwaniu chwil, słów, barw i dźwięków.
+                            Permanentną cechą naszych czasów jest ZMIANA. Zmienność to nieustanny ruch.Dynamika, która
+                            wyzwala dodatkowe pokłady energii. Synergii.I tak powstała Fundacja Vive Art — Fundacja z
+                            myślą o ludziach i ich energii. O artystach. Tych nieodkrytych i tych znanych. Wymianie
+                            myśli i emocji. Okrywaniu i współodczuwaniu chwil, słów, barw i dźwięków.
                         </p>
                     </div>
                     <div className={styles.column}>
                         <h3>Nasz cel</h3>
                         <p>
-                        Wiemy jak Wam pomóc byście zaistnieli na scenie, a w każdym razie pomóc zweryfikować Wasz potencjał artystyczny.  Z myślą o Was Stworzyliśmy miejsce w centrum Wrocławia, abyście swoją kreatywnością zaskakiwali, urzekali, a nawet szokowali nie tylko polską, ale i zagraniczną publiczność
+                            Wiemy jak Wam pomóc byście zaistnieli na scenie, a w każdym razie pomóc zweryfikować Wasz
+                            potencjał artystyczny. Z myślą o Was Stworzyliśmy miejsce w centrum Wrocławia, abyście swoją
+                            kreatywnością zaskakiwali i urzekali nie tylko polską, ale i zagraniczną publiczność.
                         </p>
                     </div>
                     <div className={styles.column}>
-                        <h3>Dla czego?</h3>
+                        <h3>Dlaczego?</h3>
                         <p>
-                        Kontakt z ludźmi, pełnymi własnych pasji i oryginalnych pomysłów sprawia, że nasze społeczeństwo nabiera artystycznego bogactwa i każdy z nas odkrywa w sobie nieznane dotąd pokłady wrażliwości, wzajemnego szacunku, tolerancji oraz odkrywa wartości poznawcze.
+                            Kontakt z ludźmi, pełnymi własnych pasji i oryginalnych pomysłów sprawia, że nasze
+                            społeczeństwo nabiera artystycznego bogactwa i każdy z nas odkrywa w sobie nieznane dotąd
+                            pokłady wrażliwości, wzajemnego szacunku, tolerancji oraz odkrywa wartości poznawcze.
                         </p>
                     </div>
                 </div>
@@ -50,24 +57,18 @@ const Cooperation = () => {
                 <div className={styles.textPart}>
                     <div className={styles.column}>
                         <h3>Jeżeli</h3>
-                        <div>
-                            <ul>
-                                <li>
-                                    cechuje Cię kreatywność i oryginalność
-                                </li>
-                                <li>
-                                    potrafisz śpiewać 
-                                </li>
-                                <li>masz własny zespół lub chcesz go stworzyć</li>
-                                <li>malować lub rysować</li>
-                                <li>piszesz wiersze</li>
-                                <li>tworzysz muzykę</li>
-                                <li>lubisz publiczność i występy</li>
-                                <li>
-                                    lub po prostu czujesz, że jesteś artystą i chcesz rozwijać swoje talenty — napisz do nas!
-                                </li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li>cechuje Cię kreatywność i oryginalność</li>
+                            <li>potrafisz śpiewać</li>
+                            <li>masz własny zespół lub chcesz go stworzyć</li>
+                            <li>malować lub rysować</li>
+                            <li>piszesz wiersze</li>
+                            <li>tworzysz muzykę</li>
+                            <li>lubisz publiczność i występy</li>
+                            <li>lub po prostu czujesz, że jesteś artystą i chcesz rozwijać swoje talenty — napisz do
+                                nas!
+                            </li>
+                        </ul>
                     </div>
                     <div className={styles.column}>
                         <h3>Jak?</h3>
@@ -90,11 +91,15 @@ const Cooperation = () => {
                     <UnderImgLinks className={styles.about_link} to={LINKS.about}>
                         WSPÓŁPRACA
                     </UnderImgLinks>
-                    <img src={'/img/aboutPage/img_aboutPage-coop.jpg'} alt='painting'/>
+                    <div className={styles.img_wrapper}>
+                        <img src={'/img/aboutPage/img_aboutPage-coop.jpg'}
+                             alt='painting'/>
+                    </div>
                 </div>
                 <div className={styles.actionPart}>
                     <p>
-                    Historyczna ulica Wrocławia  -  JATKI. Otwieramy naszą przestrzeń dla projektów sztuki i kultury. Łączymy pokolenia, stwarzamy warunki do ekspozycji, nie definiujemy. Poszukujemy…
+                        Historyczna ulica Wrocławia - JATKI. Otwieramy naszą przestrzeń dla projektów sztuki i kultury.
+                        Łączymy pokolenia, stwarzamy warunki do ekspozycji, nie definiujemy. Poszukujemy…
                     </p>
                     <Button
                         className={styles.link_btn}

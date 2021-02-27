@@ -22,9 +22,10 @@ const EventCard = ({info}) => {
                     <b className={styles.title}>Kiedy?</b>
                     <p className={styles.info}>{moment(info.date).format('LL')}</p>
                     <p className={styles.time}>{moment(info.date).format('LT')}</p>
+                    <p className={styles.mobile}>{`${moment(info?.date).format('DD.MM')} o ${moment(info?.date).format('LT')} w ${info?.place}`}</p>
                 </li>
                 {info?.place && (
-                    <li>
+                    <li className={styles.place}>
                         <b className={styles.title}>Gdzie?</b>
                         <p className={styles.info}>{info?.place}</p>
                     </li>

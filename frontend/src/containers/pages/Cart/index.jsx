@@ -5,18 +5,25 @@ import {Button, Image, Input, Select} from '../../../components/Components';
 import {useStore} from '../../../providers/StoreProvider';
 
 const CartRouteLinks = ({step = 1}) => {
+    const {location} = useHistory();
     return (
         <div className={styles.CartRouteLinks}>
-            <NavLink activeClassName={`${styles.ActiveLink}`} to={'/cart'}>
+            <NavLink
+                className={`${'/cart' === location.pathname && styles.currentLink}`}
+                activeClassName={`${styles.ActiveLink}`} to={'/cart'}>
                 Koszyk
             </NavLink>
-            <NavLink activeClassName={styles.ActiveLink} to={'/cart/cashRegister'}>
+            <NavLink
+                activeClassName={styles.ActiveLink}
+                className={`${'/cart/cashRegister' === location.pathname && styles.currentLink}`}
+                to={'/cart/cashRegister' === location.pathname ? '/cart' : '/cart/cashRegister' }>
                 Kasa
             </NavLink>
             <NavLink
-                className={step >= 3 ? '' : styles.DisabledLink}
+                className={`${step >= 3 ? '' : styles.DisabledLink}
+                ${'/cart/cashRegister/summary' === location.pathname && styles.currentLink}`}
                 activeClassName={`${styles.ActiveLink}`}
-                to={'/cart/cashRegister/summary'}
+                to={'/cart/cashRegister/summary' === location.pathname ? '/cart/cashRegister' : '/cart/cashRegister/summary'}
             >
                 Podsumowanie
             </NavLink>
@@ -73,7 +80,7 @@ const CartResult = ({cart = [], delivery = 0, className}) => {
     }, 0);
 
     return (
-        <div>
+        <div >
             <ul className={`${styles.cartResult} ${className}`}>
                 <li>
                     <p className={styles.title}>Suma</p>
@@ -376,7 +383,7 @@ export default function Cart() {
         return (
             <>
                 <h2 className={styles.NothingTitle}>Twój koszyk jest pusty</h2>
-                <Button href='/shop'>Iść do sklepu</Button>
+                <Button className={styles.NothingBtn} href='/shop'>Iść do sklepu</Button>
             </>
         );
     }

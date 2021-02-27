@@ -73,9 +73,9 @@ export default function StoreProvider({children}) {
             let newPaintingCart = [];
 
             if (localStorage.hasOwnProperty('cart')) {
-                const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
-
-                newPaintingCart = cartFromLocalStorage.map((cartItem) => {
+                const cartFromlocalStorage = JSON.parse(localStorage.getItem('cart'));
+                console.log(cartFromlocalStorage)
+                newPaintingCart = cartFromlocalStorage.filter((cartItem) => {
                     const idx = newPaintingList.findIndex(
                         (item) => item?.id === cartItem?.id
                     );
@@ -94,12 +94,12 @@ export default function StoreProvider({children}) {
                     }
                 });
             }
-
             setStore((store) => ({
                 ...store,
                 cart: newPaintingCart,
                 paintings: newPaintingList,
             }));
+            localStorage.setItem('cart', JSON.stringify([...cart, newPaintingCart]));
         }
     }, [fetchedPaintings.data]);
 
@@ -128,7 +128,7 @@ export default function StoreProvider({children}) {
 
     const removeFromCart = (id) => {
         const painting = paintings.find((item) => item.id === id);
-        const checkForExistingCart = cart.find((item) => item.id === id);
+        const checkForExistingCart = cart.find((item) => item?.id === id);
 
         if (painting && checkForExistingCart) {
             const newCart = cart.filter((item) => item.id !== id);

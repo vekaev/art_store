@@ -10,15 +10,13 @@ import {useStore} from '../../../providers/StoreProvider';
 import {Error} from "../../../components";
 
 export default function PicturePage() {
-    const history = useHistory();
-
     const {addToCart, cart} = useStore();
     const {pictureId} = useParams();
     const {loading, error, data} = useQuery(onePaintingQuery, {
         variables: {id: pictureId},
     });
 
-    if (loading) return 'Loading';
+    if (loading) return <Error message={''} code={'ZAŁADUNEK'}/>;
     if (!data?.painting || error) return <Error/>;
 
     const {painting} = data;

@@ -58,7 +58,7 @@ export function Footer() {
             <div className={styles['privacy']}>
                 <NavLink to='/' className={styles['img-part']}></NavLink>
                 <p>
-                    © Wszystkie prawa autorskie naleza do Vive Art z.o.o. | &nbsp;
+                    © Wszystkie prawa autorskie nalezą do Fundacji Vive Art | &nbsp;
                     {new Date().getFullYear() || 2020}
                 </p>
             </div>

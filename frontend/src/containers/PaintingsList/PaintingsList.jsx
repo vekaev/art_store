@@ -10,8 +10,7 @@ const LoadingCard = () => {
 };
 
 const PaintingCard = React.memo(({card, addToCart}) => {
-    console.log(card)
-    if (!card) return;
+    if (!card) return <Error/>;
 
     return (
         <li className={styles.card}>
