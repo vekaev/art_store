@@ -159,3 +159,15 @@ Y
 )backend/config/env/production/database.js,d/b/dbb50e6cefa6a60b213c8af0660bd56660838155
 W
 'backend/config/env/production/server.js,1/f/1f734ba0b4bd5e063e9e3fcd40d13a3a8f2ab402
+I
+frontend/webpack/index.js,b/a/ba6baa196af5ab88799c6b4d2235cdce87d005bc
+i
+9frontend/src/containers/pages/Contact/Contact.module.scss,4/c/4c0b4cbb6ca8a85c93f4e164be533901b7bbe405
+e
+5frontend/src/containers/pages/Event/Event.module.scss,6/c/6cf1af2cfb5f16a858b1541adf18e1884552af5c
+i
+9frontend/src/components/Navigation/Navigation.module.scss,b/1/b11b4a02a94b772491bbe1ec805bdfddbe12fa2d
+o
+?frontend/src/containers/PaintingsList/PaintingsList.module.scss,1/e/1e5a72cbbd325b8675e12dff0075195e1b7c943b
+c
+3frontend/src/containers/pages/Cart/Cart.module.scss,5/2/5251fb2ae7117054f7e2c5fcd78d1040d1834fec

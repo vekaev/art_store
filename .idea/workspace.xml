@@ -33,7 +33,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ca4b99d-a6aa-426d-bb27-ba285d2ca648" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/pages/Cart/Cart.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8acf88f942c9cadfa23ca3fda887975f8a9481bc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/994e4eb9e06c1342006d5fd1861f43d53d8dc078" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencil.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencil.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencil.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencilbold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencilbold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/fonts/Butlerstencilbold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/precache-manifest.dff7a92252c4374e438de68e7a560391.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.49cffd1f.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.49cffd1f.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.9e7c2c89.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.9e7c2c89.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.9e7c2c89.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.fa9b9d32.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.c8a21426.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +136,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cec19bc2-e4e0-42b2-aeb2-fec3f02eb7d8" name="Default Changelist" comment="" />
+      <changelist id="2ca4b99d-a6aa-426d-bb27-ba285d2ca648" name="Default Changelist" comment="" />
       <created>1601793407130</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -142,6 +164,9 @@
       <workItem from="1614150985842" duration="82000" />
       <workItem from="1614192749207" duration="506000" />
       <workItem from="1614358371259" duration="22507000" />
+      <workItem from="1614775764916" duration="579000" />
+      <workItem from="1617560578912" duration="324000" />
+      <workItem from="1618064505171" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;create header and footer&quot;">
       <created>1601873872980</created>
